@@ -1,0 +1,117 @@
+#header {
+    margin-top: 20px;
+}
+
+/*noinspection CssUnusedSymbol*/
+#header .userFullName {
+    font-weight: 600;
+}
+
+.sign-up-panel{
+     margin-top: 15px;
+}
+
+.statusBtn{
+    padding: 8px 22px;
+}
+
+
+/*noinspection CssUnusedSymbol*/
+#header .userEmail {
+    font-style: italic;
+}
+
+.container-fluid{
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.form-control{
+    height: 50px;
+}
+
+.btn{
+    padding: 14px 12px;
+}
+
+footer {
+    min-height: 50px;
+}
+
+.sign-in-title {
+    margin-bottom: 10px;
+}
+
+.login-panel {
+    margin-top: 15px;
+}
+
+.validated .messages {
+    font-size: 80%;
+    font-style: italic;
+}
+
+.validated .messages.success {
+    color: darkgreen;
+}
+
+.validated .messages.error {
+    color: #a94442;
+}
+
+.required > .control-label::before {
+    content: "*";
+    color: #a94442;
+}
+
+.requiredFieldsMessage {
+    font-size: 80%;
+    color: #a94442;
+    font-style: italic;
+}
+
+.periodicalNameModal {
+    font-weight: bold;
+
+    color: darkgreen;
+}
+
+.unfollowModal-body{
+    font-size: 20px;
+    margin: 56px;
+
+}
+
+.unfollowModal-footer{
+    margin-top: 150px;
+
+}
+
+.theadSublabel {
+    font-size: 80%;
+    font-style: italic;
+}
+
+.table > tbody > tr > td,
+.table > thead > tr > th {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.priceFreeLabel {
+    color: #a94442;
+}
+
+.costAndSumValue {
+    font-weight: bold;
+}
+
+#mainMenu {
+    font-size: 115%;
+    font-weight: bold;
+}
+
+.myAccountBtn {
+    margin-left: 10px;
+    margin-right: 10px;
+}

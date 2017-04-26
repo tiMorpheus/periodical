@@ -1,0 +1,13 @@
+com\tolochko\periodicals\model\dao\UserDaoImplTest.class
+com\tolochko\periodicals\model\service\PeriodicalServiceImplTest.class
+com\tolochko\periodicals\model\controller\security\AuthorizationTest.class
+com\tolochko\periodicals\model\controller\security\AuthenticationFilterTest.class
+com\tolochko\periodicals\model\controller\util\HttpUtilTest.class
+com\tolochko\periodicals\model\service\SubscriptionServiceImplTest.class
+com\tolochko\periodicals\model\service\UserServiceImplTest.class
+com\tolochko\periodicals\model\service\InvoiceServiceImplTest.class
+com\tolochko\periodicals\model\InitDb.class
+com\tolochko\periodicals\model\dao\PeriodicalDaoImplTest.class
+com\tolochko\periodicals\model\dao\RoleDaoImplTest.class
+com\tolochko\periodicals\model\controller\request\SignOutTest.class
+com\tolochko\periodicals\model\dao\InvoiceDaoImplTest.class

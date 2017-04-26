@@ -1,0 +1,35 @@
+<taglib version="2.0"
+        xmlns="http://java.sun.com/xml/ns/j2ee">
+    <tlib-version>0.1</tlib-version>
+    <short-name>security</short-name>
+    <uri>http://tolochko.com/javaee/jsp-tags-0.1</uri>
+    <tag>
+        <name>if-authorized</name>
+        <tag-class>com.tolochko.periodicals.controller.view.jsp.tag.AuthorizationTag</tag-class>
+        <body-content>JSP</body-content>
+
+        <attribute>
+            <name>mustHaveRole</name>
+            <required>true</required>
+        </attribute>
+
+   <!--     <attribute>
+            <name>mustNotHaveRole</name>
+        </attribute>-->
+    </tag>
+
+    <tag>
+        <name>format-datetime</name>
+        <tag-class>com.tolochko.periodicals.controller.view.jsp.tag.FormatDatetimeTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>pattern</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+</taglib>
