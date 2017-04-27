@@ -6,7 +6,6 @@ com\tolochko\periodicals\model\controller\util\HttpUtilTest.class
 com\tolochko\periodicals\model\service\SubscriptionServiceImplTest.class
 com\tolochko\periodicals\model\service\UserServiceImplTest.class
 com\tolochko\periodicals\model\service\InvoiceServiceImplTest.class
-com\tolochko\periodicals\model\InitDb.class
 com\tolochko\periodicals\model\dao\PeriodicalDaoImplTest.class
 com\tolochko\periodicals\model\dao\RoleDaoImplTest.class
 com\tolochko\periodicals\model\controller\request\SignOutTest.class

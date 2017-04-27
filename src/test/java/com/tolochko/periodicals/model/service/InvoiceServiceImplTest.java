@@ -2,6 +2,7 @@ package com.tolochko.periodicals.model.service;
 
 import com.tolochko.periodicals.model.connection.ConnectionProxy;
 import com.tolochko.periodicals.model.dao.exception.DaoException;
+import com.tolochko.periodicals.model.dao.exception.TransactionException;
 import com.tolochko.periodicals.model.dao.factory.DaoFactory;
 import com.tolochko.periodicals.model.dao.interfaces.InvoiceDao;
 import com.tolochko.periodicals.model.dao.interfaces.SubscriptionDao;
@@ -103,7 +104,7 @@ public class InvoiceServiceImplTest {
 
     }
 
-    @Ignore
+    @Test
     public void payInvoice_Should_GetEndDateIfSubscriptionIsActive() throws Exception {
         when(subscription.getStatus()).thenReturn(Subscription.Status.ACTIVE);
         when(subscription.getEndDate()).thenReturn(Instant.now());
@@ -124,6 +125,9 @@ public class InvoiceServiceImplTest {
         verify(user, times(2)).getId();
         verify(user, times(1)).getAddress();
         verify(subscriptionDao, times(1)).add(any());
+
+        verify(conn).beginTransaction();
+        verify(conn).commitTransaction();
     }
 
     @Test(expected = DaoException.class)
@@ -132,6 +136,7 @@ public class InvoiceServiceImplTest {
 
         invoiceService.payInvoice(invoice);
 
+        verify(conn).beginTransaction();
         verify(conn).rollbackTransaction();
     }
 }

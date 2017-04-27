@@ -1,6 +1,7 @@
 package com.tolochko.periodicals.model.connection;
 
 import com.tolochko.periodicals.model.dao.exception.DaoException;
+import com.tolochko.periodicals.model.dao.exception.TransactionException;
 import org.apache.log4j.Logger;
 
 import java.sql.Connection;
@@ -17,7 +18,6 @@ public class ConnectionProxyImpl implements ConnectionProxy {
 
     private Connection connection;
     private boolean transactionBegun = false;
-    private boolean transactionCommitted = false;
 
     public ConnectionProxyImpl(Connection connection) {
         this.connection = connection;
@@ -28,8 +28,9 @@ public class ConnectionProxyImpl implements ConnectionProxy {
         try {
             connection.setAutoCommit(false);
             transactionBegun = true;
+            logger.debug("Transaction begun");
         } catch (SQLException e) {
-            throw new DaoException(CAN_NOT_BEGIN_TRANSACTION, e);
+            throw new TransactionException(CAN_NOT_BEGIN_TRANSACTION, e);
         }
     }
 
@@ -38,41 +39,39 @@ public class ConnectionProxyImpl implements ConnectionProxy {
         try {
             connection.commit();
             connection.setAutoCommit(true);
-            transactionCommitted = true;
+            connection.close();
+            logger.debug("Transaction committed");
         } catch (SQLException e) {
-            throw new DaoException(CAN_NOT_COMMIT_TRANSACTION, e);
+            throw new TransactionException(CAN_NOT_COMMIT_TRANSACTION, e);
         }
-
     }
 
     @Override
     public void rollbackTransaction() {
         try {
+            logger.debug("trying to rollback transaction");
             connection.rollback();
             connection.setAutoCommit(true);
-            transactionCommitted = true;
+            connection.close();
+            logger.debug("rollback success");
         } catch (SQLException e) {
-            throw new DaoException(CAN_NOT_ROLLBACK_TRANSACTION, e);
+            throw new TransactionException(CAN_NOT_ROLLBACK_TRANSACTION, e);
         }
     }
 
     @Override
     public void close() {
-
-
         try {
-            if (transactionBegun && !transactionCommitted) {
-                rollbackTransaction();
+            if (!transactionBegun){
+                connection.close();
             }
-            connection.close();
         } catch (SQLException e) {
-            throw new DaoException(CAN_NOT_CLOSE_CONNECTION, e);
+            throw new TransactionException(CAN_NOT_CLOSE_CONNECTION, e);
         }
     }
 
     @Override
     public PreparedStatement prepareStatement(String query) throws SQLException {
-
         return connection.prepareStatement(query);
     }
 

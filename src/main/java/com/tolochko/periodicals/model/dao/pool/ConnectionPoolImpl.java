@@ -15,9 +15,10 @@ public class ConnectionPoolImpl implements ConnectionPool {
     private static final String PASS_DEFAULT = "root";
     private static final String DRIVER_NAME_DEFAULT = "com.mysql.cj.jdbc.Driver";
     private static final int MAX_TOTAL_CONNECTIONS = 10;
+
     private BasicDataSource dataSource;
 
-    private ConnectionPoolImpl(Builder builder) {
+    public ConnectionPoolImpl(Builder builder) {
         dataSource = new BasicDataSource();
         dataSource.setDriverClassName(builder.driverClassName);
         dataSource.setUrl(builder.url);
@@ -30,7 +31,9 @@ public class ConnectionPoolImpl implements ConnectionPool {
     public ConnectionProxy getConnection() {
         Connection connection;
         try {
+
             connection = dataSource.getConnection();
+            System.out.println("in connection pool ompl  " + (connection == null));
         } catch (SQLException e) {
             logger.error("Cannot create connection from data source", e);
             throw new DaoException("Cannot create connection from data source", e);

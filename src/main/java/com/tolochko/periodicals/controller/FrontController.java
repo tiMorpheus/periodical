@@ -35,7 +35,7 @@ public class FrontController extends HttpServlet {
 
         try {
 
-            String abstractViewName =  RequestProviderImpl.getInstance().getRequestProcessor(req).process(req, resp);
+            String abstractViewName = RequestProviderImpl.getInstance().getRequestProcessor(req).process(req, resp);
             dispatch(abstractViewName, req, resp);
         } catch (RuntimeException e) {
             redirectUserToErrorPageAndLogException(req, resp, e);

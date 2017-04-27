@@ -7,6 +7,7 @@ D:\code\Periodicals\src\main\java\com\tolochko\periodicals\controller\view\Syste
 D:\code\Periodicals\src\main\java\com\tolochko\periodicals\model\domain\user\User.java
 D:\code\Periodicals\src\main\java\com\tolochko\periodicals\controller\validation\Validator.java
 D:\code\Periodicals\src\main\java\com\tolochko\periodicals\controller\security\AccessDeniedException.java
+D:\code\Periodicals\src\main\java\com\tolochko\periodicals\model\dao\exception\TransactionException.java
 D:\code\Periodicals\src\main\java\com\tolochko\periodicals\model\TransactionHelper.java
 D:\code\Periodicals\src\main\java\com\tolochko\periodicals\model\connection\ConnectionProxy.java
 D:\code\Periodicals\src\main\java\com\tolochko\periodicals\model\dao\interfaces\InvoiceDao.java
@@ -84,4 +85,5 @@ D:\code\Periodicals\src\main\java\com\tolochko\periodicals\model\domain\subscrip
 D:\code\Periodicals\src\main\java\com\tolochko\periodicals\model\service\impl\InvoiceServiceImpl.java
 D:\code\Periodicals\src\main\java\com\tolochko\periodicals\controller\request\RequestProcessor.java
 D:\code\Periodicals\src\main\java\com\tolochko\periodicals\controller\validation\ValidationProcessorException.java
+D:\code\Periodicals\src\main\java\com\tolochko\periodicals\controller\validation\user\UserNameValidator.java
 D:\code\Periodicals\src\main\java\com\tolochko\periodicals\model\domain\FinancialStatistics.java

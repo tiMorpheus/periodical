@@ -9,21 +9,15 @@ import com.tolochko.periodicals.model.dao.interfaces.UserDao;
 import com.tolochko.periodicals.model.dao.pool.ConnectionPool;
 import com.tolochko.periodicals.model.domain.user.User;
 import com.tolochko.periodicals.model.service.impl.ServiceFactoryImpl;
-import com.tolochko.periodicals.model.service.impl.UserServiceImpl;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import org.mockito.*;
 
-import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
@@ -41,6 +35,9 @@ public class UserServiceImplTest {
     @Mock
     private ConnectionProxy conn;
 
+    @Mock
+    private TransactionHelper helper;
+
     @InjectMocks
     private UserService userService = ServiceFactoryImpl.getServiceFactoryInstance().getUserService();
 
@@ -52,6 +49,8 @@ public class UserServiceImplTest {
 
         when(factory.getUserDao()).thenReturn(userDao);
         when(factory.getRoleDao()).thenReturn(roleDao);
+
+
 
     }
 
@@ -98,7 +97,7 @@ public class UserServiceImplTest {
         verify(user3, atLeastOnce()).setRole(any());
     }
 
-    @Ignore
+    @Test
     public void createNewUser_Should_saveUserInDb_return_true(){
         User user = mock(User.class);
 
@@ -108,7 +107,20 @@ public class UserServiceImplTest {
         assertTrue(userService.createNewUser(user));
 
         verify(userDao, times(1)).add(user);
+        verify(roleDao, times(1)).addRole(2l, User.Role.SUBSCRIBER);
+    }
 
+    @Ignore
+    public void createNewUser_Should_rollbackTransaction_whenUserIdZero(){
+        User user = mock(User.class);
+
+        when(userDao.add(user)).thenReturn(0l);
+
+        assertFalse(userService.createNewUser(user));
+
+        TransactionHelper.beginTransaction();
+        verify(helper, times(1));
+        verify(userDao, times(1)).add(user);
         verify(roleDao, times(1)).addRole(2l, User.Role.SUBSCRIBER);
     }
 
@@ -123,7 +135,7 @@ public class UserServiceImplTest {
     }
 
 
-    @Ignore
+    @Test
     public void createNewUser_Should_ReturnFalse_And_RollbackTransaction_IfUserIsNotAdded() {
         User user = mock(User.class);
 

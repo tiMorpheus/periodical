@@ -1,6 +1,5 @@
 package com.tolochko.periodicals.model.dao;
 
-import com.tolochko.periodicals.model.InitDb;
 import com.tolochko.periodicals.model.connection.ConnectionProxy;
 import com.tolochko.periodicals.model.dao.factory.DaoFactory;
 import com.tolochko.periodicals.model.dao.factory.impl.MySqlDaoFactory;
@@ -9,7 +8,6 @@ import com.tolochko.periodicals.model.domain.invoice.Invoice;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
-import org.junit.Test;
 
 import java.sql.SQLException;
 import java.time.Instant;
@@ -26,7 +24,7 @@ public class InvoiceDaoImplTest {
 
     @BeforeClass
     public static void setUp() throws Exception {
-        conn = InitDb.getTestPool().getConnection();
+
         factory = MySqlDaoFactory.getFactoryInstance();
         invoiceDao = factory.getInvoiceDao();
     }

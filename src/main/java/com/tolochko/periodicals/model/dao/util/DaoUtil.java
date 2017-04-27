@@ -23,7 +23,7 @@ public final class DaoUtil {
      * Creates a new user using the data from the result set.
      */
     public static User createUserFromResultSet(ResultSet rs){
-        User.Builder userBuilder = null;
+        User.Builder userBuilder;
 
         try {
             userBuilder = new User.Builder()

@@ -61,18 +61,23 @@ public class UserDaoImpl implements UserDao {
         String query = "SELECT * FROM users WHERE id = ?";
 
         try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
-             PreparedStatement ps = connection.prepareStatement(query)) {
+        PreparedStatement ps = connection.prepareStatement(query)) {
             ps.setLong(1, id);
 
             try (ResultSet rs = ps.executeQuery()) {
-                return rs.next() ? DaoUtil.createUserFromResultSet(rs) : null;
+
+                if(rs.next()){
+                    return DaoUtil.createUserFromResultSet(rs);
+                }
             }
 
         } catch (SQLException e) {
+
             String message = String.format("Exception during finding a user with id = %s", id);
             logger.error(message, e);
             throw new DaoException(message, e);
         }
+        return null;
     }
 
     @Override
@@ -105,8 +110,8 @@ public class UserDaoImpl implements UserDao {
                 "(username, first_name, last_name, email, address, password, status) " +
                 "VALUES (?, ?, ?, ?, ?, ?, ?)";
 
-        ConnectionProxy connection = TransactionHelper.getConnectionProxy();
-        try (
+
+        try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
              PreparedStatement st = connection
                      .prepareStatement(sqlStatement, Statement.RETURN_GENERATED_KEYS)) {
 

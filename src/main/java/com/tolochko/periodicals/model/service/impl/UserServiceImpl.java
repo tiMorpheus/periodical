@@ -81,6 +81,7 @@ public class UserServiceImpl implements UserService {
 
             return true;
         } catch (RuntimeException e) {
+            TransactionHelper.rollback();
             logger.error("transaction failed", e);
             throw new DaoException(e);
         }

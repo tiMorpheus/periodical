@@ -26,20 +26,16 @@ import static java.util.Objects.isNull;
 
 public class InvoiceServiceImpl implements InvoiceService {
     private static final Logger logger = Logger.getLogger(InvoiceServiceImpl.class);
-
     private DaoFactory factory = MySqlDaoFactory.getFactoryInstance();
 
     @Override
     public Invoice findOneById(long invoiceId) {
-
         return factory.getInvoiceDao().findOneById(invoiceId);
     }
 
     @Override
     public List<Invoice> findAllByUserId(long userId) {
         return factory.getInvoiceDao().findAllByUserId(userId);
-
-
     }
 
     @Override
@@ -62,15 +58,20 @@ public class InvoiceServiceImpl implements InvoiceService {
             invoiceToPay.setStatus(Invoice.Status.PAID);
             invoiceToPay.setPaymentDate(Instant.now());
 
+            logger.debug("1: find user: ");
             User userFromDb = factory.getUserDao().findOneById(invoiceToPay.getUser().getId());
+            logger.debug(userFromDb);
             Periodical periodical = invoiceToPay.getPeriodical();
 
             Subscription existingSubscription = subscriptionDao
                     .findOneByUserIdAndPeriodicalId(userFromDb.getId(), periodical.getId());
+            logger.debug("2: find subscription: "+ existingSubscription);
 
             factory.getInvoiceDao().updateById(invoiceToPay.getId(), invoiceToPay);
+            logger.debug("3: update invoice: " + invoiceToPay);
 
             int subscriptionPeriod = invoiceToPay.getSubscriptionPeriod();
+
 
             if (isNull(existingSubscription)) {
                 createAndPersistNewSubscription(userFromDb, periodical, subscriptionPeriod, subscriptionDao);
@@ -78,10 +79,11 @@ public class InvoiceServiceImpl implements InvoiceService {
                 updateExistingSubscription(existingSubscription, subscriptionPeriod, subscriptionDao);
             }
 
-            logger.debug("commiting transaction");
+            logger.debug("commit transaction");
             TransactionHelper.commit();
             return true;
-        } catch (RuntimeException e) {
+        } catch (Exception e) {
+            TransactionHelper.rollback();
             logger.error("Exception during paying invoice: " + e);
             throw new DaoException(e);
         }

@@ -11,9 +11,11 @@ import java.util.Properties;
 public class ConnectionPoolProvider {
     private static final Logger logger = Logger.getLogger(ConnectionPoolProvider.class);
 
-    private static ConnectionPool instance;
+    private static ConnectionPoolProvider poolProvider = new ConnectionPoolProvider();
 
-    static {
+    private  ConnectionPool instance;
+
+    private ConnectionPoolProvider(){
         InputStream input;
         Properties properties = new Properties();
         try {
@@ -21,7 +23,17 @@ public class ConnectionPoolProvider {
             input = ConnectionPoolProvider.class.getClassLoader()
                     .getResourceAsStream("config/database.properties");
             properties.load(input);
-            instance = createPoolFromProperties(properties);
+
+            String url = properties.getProperty("database.url");
+            String userName = properties.getProperty("database.username");
+            String userPassword = properties.getProperty("database.password");
+            int maxConnNumber = Integer.parseInt(properties.getProperty("database.maxconnections"));
+
+            instance = ConnectionPoolImpl.getBuilder(url)
+                    .setUserName(userName)
+                    .setPassword(userPassword)
+                    .setMaxConnections(maxConnNumber)
+                    .build();
 
         } catch (FileNotFoundException e) {
             logger.error("Exception during opening the db-config", e);
@@ -32,27 +44,11 @@ public class ConnectionPoolProvider {
         }
     }
 
-    private ConnectionPoolProvider(){}
-
-    public static ConnectionPool createPoolFromProperties(Properties properties) {
-        String url = properties.getProperty("database.url");
-        String userName = properties.getProperty("database.username");
-        String userPassword = properties.getProperty("database.password");
-        int maxConnNumber = Integer.parseInt(properties.getProperty("database.maxconnections"));
-
-
-        return ConnectionPoolImpl.getBuilder(url)
-                .setUserName(userName)
-                .setPassword(userPassword)
-                .setMaxConnections(maxConnNumber)
-                .build();
-    }
-
-    public static ConnectionPool getPool() {
-        if (instance == null) {
-            throw new IllegalStateException("Connection manager hasn't initialized yet!");
-        }
+    public ConnectionPool getPool() {
         return instance;
     }
 
+    public static ConnectionPoolProvider getInstance() {
+        return poolProvider;
+    }
 }

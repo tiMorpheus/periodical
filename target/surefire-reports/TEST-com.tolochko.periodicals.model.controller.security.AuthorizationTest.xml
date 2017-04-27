@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="10" failures="0" name="com.tolochko.periodicals.model.controller.security.AuthorizationTest" time="0" errors="0" skipped="0">
+<testsuite tests="10" failures="0" name="com.tolochko.periodicals.model.controller.security.AuthorizationTest" time="0.016" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_121\jre\bin"/>
@@ -74,5 +74,5 @@
   <testcase classname="com.tolochko.periodicals.model.controller.security.AuthorizationTest" name="checkPermissions_AccessToDisplayPeriodicals_ShouldReturn_TrueForAdmin" time="0"/>
   <testcase classname="com.tolochko.periodicals.model.controller.security.AuthorizationTest" name="checkPermissions_AccessToUpdatePeriodical_ShouldReturn_FalseForNotAdmin" time="0"/>
   <testcase classname="com.tolochko.periodicals.model.controller.security.AuthorizationTest" name="checkPermissions_AccessToDisplayUsers_ShouldReturn_TrueForAdmin" time="0"/>
-  <testcase classname="com.tolochko.periodicals.model.controller.security.AuthorizationTest" name="checkPermissions_AccessToDisplayUsers_ShouldReturn_FalseForNotAdmin" time="0"/>
+  <testcase classname="com.tolochko.periodicals.model.controller.security.AuthorizationTest" name="checkPermissions_AccessToDisplayUsers_ShouldReturn_FalseForNotAdmin" time="0.016"/>
 </testsuite>

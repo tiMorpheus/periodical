@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="com.tolochko.periodicals.model.controller.util.HttpUtilTest" time="0.001" errors="0" skipped="0">
+<testsuite tests="3" failures="0" name="com.tolochko.periodicals.model.controller.util.HttpUtilTest" time="0" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_121\jre\bin"/>
@@ -67,5 +67,5 @@
   </properties>
   <testcase classname="com.tolochko.periodicals.model.controller.util.HttpUtilTest" name="getFirstIdFromUri_Should_ReturnCorrectId" time="0"/>
   <testcase classname="com.tolochko.periodicals.model.controller.util.HttpUtilTest" name="getUserIdFromSession_Should_ReturnCorrectId" time="0"/>
-  <testcase classname="com.tolochko.periodicals.model.controller.util.HttpUtilTest" name="getPeriodicalFromRequest_Should_ReturnPeriodical" time="0.001"/>
+  <testcase classname="com.tolochko.periodicals.model.controller.util.HttpUtilTest" name="getPeriodicalFromRequest_Should_ReturnPeriodical" time="0"/>
 </testsuite>

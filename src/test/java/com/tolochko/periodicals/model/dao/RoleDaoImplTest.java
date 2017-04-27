@@ -1,6 +1,5 @@
 package com.tolochko.periodicals.model.dao;
 
-import com.tolochko.periodicals.model.InitDb;
 import com.tolochko.periodicals.model.connection.ConnectionProxy;
 import com.tolochko.periodicals.model.dao.factory.DaoFactory;
 import com.tolochko.periodicals.model.dao.factory.impl.MySqlDaoFactory;
@@ -26,7 +25,7 @@ public class RoleDaoImplTest {
 
     @BeforeClass
     public static void setUp() throws Exception {
-        conn = InitDb.getTestPool().getConnection();
+
         factory = MySqlDaoFactory.getFactoryInstance();
         roleDao = factory.getRoleDao();
 

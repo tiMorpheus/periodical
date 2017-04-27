@@ -2,11 +2,9 @@ package com.tolochko.periodicals.model;
 
 import com.tolochko.periodicals.model.connection.ConnectionProxy;
 import com.tolochko.periodicals.model.dao.exception.DaoException;
-import com.tolochko.periodicals.model.dao.pool.ConnectionPool;
+import com.tolochko.periodicals.model.dao.exception.TransactionException;
 import com.tolochko.periodicals.model.dao.pool.ConnectionPoolProvider;
 import org.apache.log4j.Logger;
-
-import static jdk.internal.dynalink.support.Guards.isNull;
 
 public class TransactionHelper {
     private static final Logger logger = Logger.getLogger(TransactionHelper.class);
@@ -16,7 +14,10 @@ public class TransactionHelper {
         ConnectionProxy connection = connections.get();
 
         if (connection == null) {
-            connection = ConnectionPoolProvider.getPool().getConnection();
+            connection = ConnectionPoolProvider
+                    .getInstance()
+                    .getPool()
+                    .getConnection();
         }
 
         return connection;
@@ -24,11 +25,16 @@ public class TransactionHelper {
 
     public static void beginTransaction() {
         try {
-            ConnectionProxy connection = ConnectionPoolProvider.getPool().getConnection();
+            ConnectionProxy connection = ConnectionPoolProvider
+                    .getInstance()
+                    .getPool()
+                    .getConnection();
+
             connections.set(connection);
             connection.beginTransaction();
         } catch (RuntimeException e){
-
+            logger.error("Exception during beginning transaction");
+            throw new TransactionException(e);
         }
     }
 
@@ -38,6 +44,7 @@ public class TransactionHelper {
         }
         logger.debug("transaction rollback");
         connections.get().rollbackTransaction();
+        connections.remove();
     }
 
     public static void commit() {
@@ -46,6 +53,7 @@ public class TransactionHelper {
         }
         logger.debug("commit");
         connections.get().commitTransaction();
+        connections.remove();
     }
 
 }
