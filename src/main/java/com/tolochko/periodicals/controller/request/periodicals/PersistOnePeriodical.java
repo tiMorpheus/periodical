@@ -50,7 +50,7 @@ public class PersistOnePeriodical implements RequestProcessor {
         if (isPeriodicalToSaveValid(periodicalToSave, request)) {
             generalMessages.add(messageFactory.getInfo("validation.passedSuccessfully.success"));
         } else {
-            return REDIRECT + redirectUri;
+            return redirectUri;
         }
 
         try {
@@ -65,7 +65,7 @@ public class PersistOnePeriodical implements RequestProcessor {
                     addErrorMessage("validation.periodicalHasActiveSubscriptions.error",
                             generalMessages, request);
 
-                    return REDIRECT + redirectUri;
+                    return redirectUri;
                 }
             } else {
                 periodicalService.save(periodicalToSave);
@@ -77,7 +77,7 @@ public class PersistOnePeriodical implements RequestProcessor {
         } catch (RuntimeException e) {
             logger.error("Exception during persisting periodical: " + periodicalToSave, e);
             addErrorMessage("periodicalPersisting.error", generalMessages, request);
-            return REDIRECT + redirectUri;
+            return redirectUri;
         }
     }
 

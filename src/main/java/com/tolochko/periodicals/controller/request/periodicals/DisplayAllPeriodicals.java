@@ -23,6 +23,6 @@ public class DisplayAllPeriodicals implements RequestProcessor{
     public String process(HttpServletRequest request, HttpServletResponse response) {
         request.setAttribute("allPeriodicals", periodicalService.findAll());
 
-        return FORWARD + "periodicals/periodicalList";
+        return "periodicals/periodicalList";
     }
 }

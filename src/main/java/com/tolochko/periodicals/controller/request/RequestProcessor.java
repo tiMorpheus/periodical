@@ -4,9 +4,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public interface RequestProcessor {
-    String FORWARD = "forward:";
-    String REDIRECT = "redirect:";
-    String NO_ACTION = "noAction:noUri";
     
     /**
      * Processes a current http request.

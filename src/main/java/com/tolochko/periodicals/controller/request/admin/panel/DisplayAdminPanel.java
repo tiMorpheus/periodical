@@ -30,7 +30,7 @@ public class DisplayAdminPanel implements RequestProcessor {
         addPeriodicalStatsIntoRequest(request);
         addFinStatsIntoRequest(request);
 
-        return FORWARD + "adminPanel";
+        return "adminPanel";
     }
 
     private void addPeriodicalStatsIntoRequest(HttpServletRequest request) {

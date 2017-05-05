@@ -38,6 +38,6 @@ public class UpdateUser implements RequestProcessor {
 
         HttpUtil.addGeneralMessagesToSession(request, generalMessages);
 
-        return REDIRECT + "/app";
+        return "/app";
     }
 }

@@ -26,7 +26,7 @@ public class DisplayNewPeriodicalPage implements RequestProcessor{
         request.getSession().removeAttribute(PERIODICAL_ATTRIBUTE);
         setRequestAttributes(request);
 
-        return FORWARD + "periodicals/createAndEdit";
+        return "periodicals/createAndEdit";
     }
 
     private void setRequestAttributes(HttpServletRequest request) {

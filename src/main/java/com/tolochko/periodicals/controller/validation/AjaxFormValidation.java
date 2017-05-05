@@ -42,7 +42,7 @@ public class AjaxFormValidation implements RequestProcessor {
             jsonResponse.put("validationMessage", getLocalizedMessage(session, result));
 
             writeJsonIntoResponse(response, jsonResponse);
-            return NO_ACTION;
+            return null;
 
         } catch (JSONException e) {
             logger.error("Exception during putting values into json object.", e);

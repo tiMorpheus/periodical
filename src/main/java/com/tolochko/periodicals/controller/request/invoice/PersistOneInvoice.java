@@ -41,7 +41,7 @@ public class PersistOneInvoice implements RequestProcessor {
 
         HttpUtil.addGeneralMessagesToSession(request, generalMessages);
 
-        return REDIRECT + getRedirectUri(periodicalId);
+        return getRedirectUri(periodicalId);
     }
 
     private String getRedirectUri(long periodicalId) {

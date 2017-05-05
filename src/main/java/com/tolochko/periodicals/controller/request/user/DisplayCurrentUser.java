@@ -48,7 +48,7 @@ public class DisplayCurrentUser implements RequestProcessor {
             request.setAttribute("userSubscriptions", subscriptions);
         }
 
-        return FORWARD + "users/userAccount";
+        return "users/userAccount";
     }
 
 

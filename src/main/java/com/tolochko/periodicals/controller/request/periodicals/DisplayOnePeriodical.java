@@ -42,7 +42,7 @@ public class DisplayOnePeriodical implements RequestProcessor {
 
         request.setAttribute("periodical", periodicalInDb);
 
-        return FORWARD + "periodicals/onePeriodical";
+        return "periodicals/onePeriodical";
     }
 
     private void checkPeriodicalExists(long periodicalId, Periodical periodicalInDb) {

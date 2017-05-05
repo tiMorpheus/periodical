@@ -13,6 +13,6 @@ public class DisplayBackendHomePage implements RequestProcessor {
 
     @Override
     public String process(HttpServletRequest request, HttpServletResponse response) {
-        return FORWARD + "home";
+        return "home";
     }
 }

@@ -22,7 +22,6 @@ public final class Authorization {
         permissionMapping.put("POST:/app/periodicals/discarded/?", admin);
         permissionMapping.put("GET:/app/adminPanel/?", admin);
         permissionMapping.put("POST:/app/users/changeStatus/\\d+/?", admin);
-
     }
 
     private Authorization() {

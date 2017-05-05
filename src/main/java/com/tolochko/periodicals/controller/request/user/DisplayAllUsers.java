@@ -25,6 +25,6 @@ public class DisplayAllUsers implements RequestProcessor{
         List<User> list = userService.findAll();
         logger.debug("find: "+ list.size()+ " users");
         request.setAttribute("allUsers", userService.findAll());
-        return FORWARD + "users/userList";
+        return "users/userList";
     }
 }

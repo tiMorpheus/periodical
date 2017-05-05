@@ -13,6 +13,6 @@ public class DisplaySignUpPage implements RequestProcessor {
     @Override
     public String process(HttpServletRequest request, HttpServletResponse response) {
         request.setAttribute("roles", User.Role.values());
-        return FORWARD + "signUp";
+        return "signUp";
     }
 }

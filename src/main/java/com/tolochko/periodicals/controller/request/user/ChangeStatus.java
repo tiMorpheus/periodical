@@ -37,7 +37,7 @@ public class ChangeStatus implements RequestProcessor {
 
         HttpUtil.addGeneralMessagesToSession(request, generalMessages);
 
-        return REDIRECT + "/app";
+        return "/app";
     }
 
     private void updateUserStatus(User user) {

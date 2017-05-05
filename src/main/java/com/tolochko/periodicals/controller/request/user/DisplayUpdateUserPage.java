@@ -34,7 +34,7 @@ public class DisplayUpdateUserPage implements RequestProcessor {
 
         setRequestAttributes(request, user);
 
-        return FORWARD + "users/edit";
+        return "users/edit";
     }
 
     private void setRequestAttributes(HttpServletRequest request, User user) {

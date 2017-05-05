@@ -46,7 +46,7 @@ public class PayOneInvoice implements RequestProcessor {
 
         HttpUtil.addGeneralMessagesToSession(request, generalMessages);
 
-        return REDIRECT + "/app/users/currentUser";
+        return "/app/users/currentUser";
     }
 
     private int getInvoiceIdFromRequest(HttpServletRequest request) {

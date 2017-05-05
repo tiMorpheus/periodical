@@ -74,7 +74,7 @@ public class CreateUser implements RequestProcessor {
             session.setAttribute("messages", formMessages);
         }
 
-        return REDIRECT + redirectUri;
+        return redirectUri;
     }
 
     private boolean createUser(String username, String userEmail,String address, String password) {

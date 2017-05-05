@@ -36,7 +36,7 @@ public class DisplayUpdatePeriodicalPage implements RequestProcessor {
 
         setRequestAttributes(request, periodical);
 
-        return FORWARD + "periodicals/createAndEdit";
+        return "periodicals/createAndEdit";
     }
 
     private void setRequestAttributes(HttpServletRequest request, Periodical periodical) {

@@ -45,7 +45,7 @@ public final class SignIn implements RequestProcessor {
         }
 
         setSessionAttributes(request, messages);
-        return REDIRECT + redirectUri;
+        return redirectUri;
     }
 
     /**

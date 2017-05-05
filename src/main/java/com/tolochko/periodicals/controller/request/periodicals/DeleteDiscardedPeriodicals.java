@@ -33,7 +33,7 @@ public class DeleteDiscardedPeriodicals implements RequestProcessor {
 
         HttpUtil.addGeneralMessagesToSession(request, generalMessages);
 
-        return REDIRECT + "/app/periodicals";
+        return "/app/periodicals";
     }
 
     private void addDeleteResultMessage(List<FrontMessage> generalMessages, int deletedPeriodicalsNumber) {
