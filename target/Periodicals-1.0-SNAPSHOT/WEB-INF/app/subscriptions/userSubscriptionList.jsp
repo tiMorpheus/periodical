@@ -26,20 +26,20 @@
 
                 <td><custom:format-datetime value="${subscription.endDate}"/></td>
                 <td><p><fmt:message key="${subscription.status}" bundle="${langSubscription}"/></p>
-                    <custom:if-authorized mustHaveRole="subscriber">
-                        <c:if test="${currentUser.status == 'ACTIVE'}">
-                            <button type="button" class="btn btn-warning" data-toggle="modal"
-                                    data-target="#unfollowModal">
-                                <fmt:message key="unfollowBtn.label" bundle="${langSubscription}"/>
-                            </button>
-                        </c:if>
-                    </custom:if-authorized>
+                    <%--<custom:if-authorized mustHaveRole="subscriber">--%>
+                        <%--<c:if test="${currentUser.status == 'ACTIVE'}">--%>
+                            <%--<button type="button" class="btn btn-warning" data-toggle="modal"--%>
+                                    <%--data-target="#unfollowModal">--%>
+                                <%--<fmt:message key="unfollowBtn.label" bundle="${langSubscription}"/>--%>
+                            <%--</button>--%>
+                        <%--</c:if>--%>
+                    <%--</custom:if-authorized>--%>
                 </td>
             </tr>
-            <custom:if-authorized mustHaveRole="subscriber">
-                <!-- Modal window -->
-                <%@include file="unfollowModalWindow.jsp" %>
-            </custom:if-authorized>
+            <%--<custom:if-authorized mustHaveRole="subscriber">--%>
+                <%--<!-- Modal window -->--%>
+                <%--<%@include file="unfollowModalWindow.jsp" %>--%>
+            <%--</custom:if-authorized>--%>
 
         </c:forEach>
         </tbody>

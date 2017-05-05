@@ -39,7 +39,6 @@ public final class SignIn implements RequestProcessor {
         if (isSignCorrect(request)) {
 
             redirectUri = signInIfUserIsActive(request, messages);
-
         } else {
             addErrorMessages(messages);
             redirectUri = "/login.jsp";

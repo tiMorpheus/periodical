@@ -54,6 +54,7 @@ public class AjaxFormValidation implements RequestProcessor {
 
     private void writeJsonIntoResponse(HttpServletResponse response, JSONObject jsonResponse)
             throws IOException {
+
         PrintWriter writer = response.getWriter();
         writer.println(jsonResponse.toString());
         writer.flush();

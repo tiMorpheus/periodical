@@ -15,6 +15,6 @@ public class SignOut implements RequestProcessor{
         request.getSession().removeAttribute("currentUser");
         request.getSession().invalidate();
 
-        return REDIRECT + "/login.jsp";
+        return FORWARD + "home";
     }
 }

@@ -1,11 +1,13 @@
 package com.tolochko.periodicals.controller.validation;
 
 public final class ValidationResult {
+
     /**
      * If equals to {@code STATUS_CODE_SUCCESS}, it means that validation has been passed successfully.
      * Otherwise - validation failed.
      */
     private int statusCode;
+
     /**
      * An i18n message key.
      */

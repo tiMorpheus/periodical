@@ -22524,3 +22524,1082 @@ com.tolochko.periodicals.model.dao.exception.DaoException
 2017-04-26 17:52:46 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
 2017-04-26 17:52:46 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
 2017-04-26 17:52:46 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:38:12 INFO  HttpUtil:76 - getting user for session: null
+2017-05-05 15:38:14 INFO  HttpUtil:76 - getting user for session: null
+2017-05-05 15:38:14 DEBUG InvoiceServiceImpl:54 - paying invoice... begin transaction
+2017-05-05 15:38:14 DEBUG ConnectionProxyImpl:31 - Transaction begun
+2017-05-05 15:38:14 DEBUG InvoiceServiceImpl:61 - 1: find user: 
+2017-05-05 15:38:14 DEBUG InvoiceServiceImpl:63 - user
+2017-05-05 15:38:14 DEBUG InvoiceServiceImpl:68 - 2: find subscription: subscription
+2017-05-05 15:38:14 DEBUG InvoiceServiceImpl:71 - 3: update invoice: Invoice{id=10, user=user, periodical=Periodical{id=5, name='null', category='null', publisher='null',  oneMonthCost='0', status='null'}, subscriptionPeriod=1, totalSum=0, creationDate=null, paymentDate=2017-05-05T12:38:14.769Z, status=PAID}
+2017-05-05 15:38:14 DEBUG InvoiceServiceImpl:82 - commit transaction
+2017-05-05 15:38:14 DEBUG TransactionHelper:54 - commit
+2017-05-05 15:38:14 DEBUG ConnectionProxyImpl:43 - Transaction committed
+2017-05-05 15:38:14 DEBUG InvoiceServiceImpl:54 - paying invoice... begin transaction
+2017-05-05 15:38:14 DEBUG ConnectionProxyImpl:31 - Transaction begun
+2017-05-05 15:38:14 DEBUG InvoiceServiceImpl:61 - 1: find user: 
+2017-05-05 15:38:14 DEBUG InvoiceServiceImpl:63 - user
+2017-05-05 15:38:14 DEBUG InvoiceServiceImpl:68 - 2: find subscription: subscription
+2017-05-05 15:38:14 DEBUG InvoiceServiceImpl:71 - 3: update invoice: Invoice{id=10, user=user, periodical=Periodical{id=5, name='null', category='null', publisher='null',  oneMonthCost='0', status='null'}, subscriptionPeriod=1, totalSum=0, creationDate=null, paymentDate=2017-05-05T12:38:14.862Z, status=PAID}
+2017-05-05 15:38:14 DEBUG InvoiceServiceImpl:82 - commit transaction
+2017-05-05 15:38:14 DEBUG TransactionHelper:54 - commit
+2017-05-05 15:38:14 DEBUG ConnectionProxyImpl:43 - Transaction committed
+2017-05-05 15:38:14 DEBUG InvoiceServiceImpl:54 - paying invoice... begin transaction
+2017-05-05 15:38:14 DEBUG ConnectionProxyImpl:31 - Transaction begun
+2017-05-05 15:38:14 DEBUG InvoiceServiceImpl:61 - 1: find user: 
+2017-05-05 15:38:14 DEBUG InvoiceServiceImpl:63 - user
+2017-05-05 15:38:14 DEBUG InvoiceServiceImpl:68 - 2: find subscription: subscription
+2017-05-05 15:38:14 DEBUG InvoiceServiceImpl:71 - 3: update invoice: Invoice{id=10, user=user, periodical=Periodical{id=5, name='null', category='null', publisher='null',  oneMonthCost='0', status='null'}, subscriptionPeriod=1, totalSum=0, creationDate=null, paymentDate=2017-05-05T12:38:14.879Z, status=PAID}
+2017-05-05 15:38:14 DEBUG TransactionHelper:45 - transaction rollback
+2017-05-05 15:38:14 DEBUG ConnectionProxyImpl:52 - trying to rollback transaction
+2017-05-05 15:38:14 DEBUG ConnectionProxyImpl:56 - rollback success
+2017-05-05 15:38:14 ERROR InvoiceServiceImpl:87 - Exception during paying invoice: com.tolochko.periodicals.model.dao.exception.DaoException
+2017-05-05 15:38:14 DEBUG SubscriptionServiceImpl:31 - checking subscription time with current: 2017-05-05T12:38:14.999Z
+2017-05-05 15:38:15 DEBUG SubscriptionServiceImpl:32 - checking subscription time  2017-05-05T12:38:14.998Z
+2017-05-05 15:38:15 DEBUG ConnectionProxyImpl:31 - Transaction begun
+2017-05-05 15:38:15 DEBUG TransactionHelper:45 - transaction rollback
+2017-05-05 15:38:15 DEBUG ConnectionProxyImpl:52 - trying to rollback transaction
+2017-05-05 15:38:15 DEBUG ConnectionProxyImpl:56 - rollback success
+2017-05-05 15:38:15 ERROR UserServiceImpl:85 - transaction failed
+com.tolochko.periodicals.model.dao.exception.DaoException
+2017-05-05 15:38:15 DEBUG ConnectionProxyImpl:31 - Transaction begun
+2017-05-05 15:38:15 DEBUG TransactionHelper:54 - commit
+2017-05-05 15:38:15 DEBUG ConnectionProxyImpl:43 - Transaction committed
+2017-05-05 15:38:15 INFO  UserServiceImpl:34 - setting role to user: null
+2017-05-05 15:38:15 DEBUG UserServiceImpl:38 - Mock for User, hashCode: 1256405521
+2017-05-05 15:38:15 INFO  UserServiceImpl:34 - setting role to user: null
+2017-05-05 15:38:15 DEBUG UserServiceImpl:38 - Mock for User, hashCode: 708153797
+2017-05-05 15:38:15 DEBUG ConnectionProxyImpl:31 - Transaction begun
+2017-05-05 15:38:15 DEBUG TransactionHelper:45 - transaction rollback
+2017-05-05 15:38:15 DEBUG ConnectionProxyImpl:52 - trying to rollback transaction
+2017-05-05 15:38:15 DEBUG ConnectionProxyImpl:56 - rollback success
+2017-05-05 15:41:08 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:41:08 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:41:24 DEBUG EncodingFilter:24 - encoding: charset UTF-8
+2017-05-05 15:41:24 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:41:40 DEBUG EncodingFilter:24 - encoding: charset UTF-8
+2017-05-05 15:41:40 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:41:50 DEBUG EncodingFilter:24 - encoding: charset UTF-8
+2017-05-05 15:41:50 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:41:58 DEBUG EncodingFilter:24 - encoding: charset UTF-8
+2017-05-05 15:41:58 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:41:58 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:41:58 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:41:58 DEBUG CreateUser:82 - Address :address
+2017-05-05 15:41:58 DEBUG ConnectionProxyImpl:31 - Transaction begun
+2017-05-05 15:41:59 DEBUG TransactionHelper:54 - commit
+2017-05-05 15:41:59 DEBUG ConnectionProxyImpl:43 - Transaction committed
+2017-05-05 15:42:05 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:42:05 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:42:05 INFO  UserServiceImpl:34 - setting role to user: user11
+2017-05-05 15:42:05 DEBUG UserServiceImpl:38 - User{id=30,username='user11' firstName='null', lastName='null', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:05 DEBUG SignIn:63 - User{id=30,username='user11' firstName='null', lastName='null', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:05 DEBUG SignIn:64 - pass: 123456
+2017-05-05 15:42:05 INFO  UserServiceImpl:34 - setting role to user: user11
+2017-05-05 15:42:05 DEBUG UserServiceImpl:38 - User{id=30,username='user11' firstName='null', lastName='null', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:05 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:42:05 INFO  HttpUtil:76 - getting user for session: 497A5A3C12FC582EB619D9DB7A054B64
+2017-05-05 15:42:05 INFO  UserServiceImpl:34 - setting role to user: user11
+2017-05-05 15:42:05 DEBUG UserServiceImpl:38 - User{id=30,username='user11' firstName='null', lastName='null', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:05 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:42:05 INFO  HttpUtil:76 - getting user for session: 497A5A3C12FC582EB619D9DB7A054B64
+2017-05-05 15:42:06 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='null', lastName='null', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:06 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='null', lastName='null', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:06 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='null', lastName='null', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:06 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='null', lastName='null', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:07 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:42:07 INFO  HttpUtil:76 - getting user for session: 497A5A3C12FC582EB619D9DB7A054B64
+2017-05-05 15:42:07 INFO  UserServiceImpl:34 - setting role to user: user11
+2017-05-05 15:42:07 DEBUG UserServiceImpl:38 - User{id=30,username='user11' firstName='null', lastName='null', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:07 INFO  HttpUtil:76 - getting user for session: 497A5A3C12FC582EB619D9DB7A054B64
+2017-05-05 15:42:07 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:42:07 INFO  HttpUtil:76 - getting user for session: 497A5A3C12FC582EB619D9DB7A054B64
+2017-05-05 15:42:07 INFO  UserServiceImpl:34 - setting role to user: user11
+2017-05-05 15:42:07 DEBUG UserServiceImpl:38 - User{id=30,username='user11' firstName='null', lastName='null', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:07 DEBUG DisplayUpdateUserPage:28 - inside process
+2017-05-05 15:42:08 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='null', lastName='null', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:08 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='null', lastName='null', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:08 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='null', lastName='null', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:08 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='null', lastName='null', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:23 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:42:23 INFO  HttpUtil:76 - getting user for session: 497A5A3C12FC582EB619D9DB7A054B64
+2017-05-05 15:42:23 INFO  UserServiceImpl:34 - setting role to user: user11
+2017-05-05 15:42:23 DEBUG UserServiceImpl:38 - User{id=30,username='user11' firstName='null', lastName='null', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:23 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:42:23 INFO  HttpUtil:76 - getting user for session: 497A5A3C12FC582EB619D9DB7A054B64
+2017-05-05 15:42:23 INFO  UserServiceImpl:34 - setting role to user: user11
+2017-05-05 15:42:23 DEBUG UserServiceImpl:38 - User{id=30,username='user11' firstName='null', lastName='null', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:23 DEBUG UserServiceImpl:102 - inside userService update id:30
+2017-05-05 15:42:23 DEBUG UserServiceImpl:104 - updating result1
+2017-05-05 15:42:23 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:42:23 INFO  HttpUtil:76 - getting user for session: 497A5A3C12FC582EB619D9DB7A054B64
+2017-05-05 15:42:23 INFO  UserServiceImpl:34 - setting role to user: user11
+2017-05-05 15:42:23 DEBUG UserServiceImpl:38 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:23 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:42:24 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:24 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:24 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:24 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:27 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:42:27 INFO  HttpUtil:76 - getting user for session: 497A5A3C12FC582EB619D9DB7A054B64
+2017-05-05 15:42:27 INFO  UserServiceImpl:34 - setting role to user: user11
+2017-05-05 15:42:27 DEBUG UserServiceImpl:38 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:27 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:42:27 INFO  HttpUtil:76 - getting user for session: 497A5A3C12FC582EB619D9DB7A054B64
+2017-05-05 15:42:27 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:27 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:27 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:27 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:29 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:42:29 INFO  HttpUtil:76 - getting user for session: 497A5A3C12FC582EB619D9DB7A054B64
+2017-05-05 15:42:29 INFO  UserServiceImpl:34 - setting role to user: user11
+2017-05-05 15:42:29 DEBUG UserServiceImpl:38 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:29 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:42:30 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:30 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:30 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:30 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:30 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:30 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:30 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:30 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:30 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:30 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:30 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:30 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:30 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:30 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:30 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:30 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:30 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:30 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:30 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:30 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:34 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:42:34 INFO  HttpUtil:76 - getting user for session: 497A5A3C12FC582EB619D9DB7A054B64
+2017-05-05 15:42:34 INFO  UserServiceImpl:34 - setting role to user: user11
+2017-05-05 15:42:34 DEBUG UserServiceImpl:38 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:34 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:42:34 INFO  HttpUtil:76 - getting user for session: 497A5A3C12FC582EB619D9DB7A054B64
+2017-05-05 15:42:34 INFO  UserServiceImpl:34 - setting role to user: user11
+2017-05-05 15:42:34 DEBUG UserServiceImpl:38 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:34 DEBUG PeriodicalServiceImpl:25 - looking for an periodical with id:11
+2017-05-05 15:42:35 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:35 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:35 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:35 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:35 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:35 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:35 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:35 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:35 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:35 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:40 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:42:40 INFO  HttpUtil:76 - getting user for session: 497A5A3C12FC582EB619D9DB7A054B64
+2017-05-05 15:42:40 INFO  UserServiceImpl:34 - setting role to user: user11
+2017-05-05 15:42:40 DEBUG UserServiceImpl:38 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:40 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:42:40 INFO  HttpUtil:76 - getting user for session: 497A5A3C12FC582EB619D9DB7A054B64
+2017-05-05 15:42:40 INFO  UserServiceImpl:34 - setting role to user: user11
+2017-05-05 15:42:40 DEBUG UserServiceImpl:38 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:40 DEBUG PeriodicalServiceImpl:25 - looking for an periodical with id:11
+2017-05-05 15:42:40 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:40 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:40 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:40 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:40 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:40 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:40 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:40 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:40 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:40 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:48 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:42:48 INFO  HttpUtil:76 - getting user for session: 497A5A3C12FC582EB619D9DB7A054B64
+2017-05-05 15:42:48 INFO  UserServiceImpl:34 - setting role to user: user11
+2017-05-05 15:42:48 DEBUG UserServiceImpl:38 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:48 INFO  HttpUtil:76 - getting user for session: 497A5A3C12FC582EB619D9DB7A054B64
+2017-05-05 15:42:48 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:42:48 DEBUG PeriodicalServiceImpl:25 - looking for an periodical with id:11
+2017-05-05 15:42:48 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:42:48 INFO  HttpUtil:76 - getting user for session: 497A5A3C12FC582EB619D9DB7A054B64
+2017-05-05 15:42:48 INFO  UserServiceImpl:34 - setting role to user: user11
+2017-05-05 15:42:48 DEBUG UserServiceImpl:38 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:48 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:42:48 INFO  HttpUtil:76 - getting user for session: 497A5A3C12FC582EB619D9DB7A054B64
+2017-05-05 15:42:48 INFO  UserServiceImpl:34 - setting role to user: user11
+2017-05-05 15:42:48 DEBUG UserServiceImpl:38 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:48 DEBUG PeriodicalServiceImpl:25 - looking for an periodical with id:11
+2017-05-05 15:42:48 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:48 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:48 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:48 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:48 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:48 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:48 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:48 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:48 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:48 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:50 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:42:50 INFO  HttpUtil:76 - getting user for session: 497A5A3C12FC582EB619D9DB7A054B64
+2017-05-05 15:42:50 INFO  UserServiceImpl:34 - setting role to user: user11
+2017-05-05 15:42:50 DEBUG UserServiceImpl:38 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:50 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:42:50 INFO  HttpUtil:76 - getting user for session: 497A5A3C12FC582EB619D9DB7A054B64
+2017-05-05 15:42:50 DEBUG PeriodicalServiceImpl:25 - looking for an periodical with id:11
+2017-05-05 15:42:50 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:50 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:50 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:50 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:55 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:42:55 INFO  HttpUtil:76 - getting user for session: 497A5A3C12FC582EB619D9DB7A054B64
+2017-05-05 15:42:55 INFO  UserServiceImpl:34 - setting role to user: user11
+2017-05-05 15:42:55 DEBUG UserServiceImpl:38 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:55 INFO  HttpUtil:76 - getting user for session: 497A5A3C12FC582EB619D9DB7A054B64
+2017-05-05 15:42:55 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:42:55 DEBUG PeriodicalServiceImpl:25 - looking for an periodical with id:11
+2017-05-05 15:42:55 DEBUG InvoiceServiceImpl:54 - paying invoice... begin transaction
+2017-05-05 15:42:55 DEBUG ConnectionProxyImpl:31 - Transaction begun
+2017-05-05 15:42:55 DEBUG InvoiceServiceImpl:61 - 1: find user: 
+2017-05-05 15:42:55 DEBUG InvoiceServiceImpl:63 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=null}
+2017-05-05 15:42:55 DEBUG InvoiceServiceImpl:68 - 2: find subscription: null
+2017-05-05 15:42:55 DEBUG InvoiceServiceImpl:71 - 3: update invoice: Invoice{id=19, user=User{id=30,username='null' firstName='null', lastName='null', email='null', address='null', status=null, role=null}, periodical=Periodical{id=11, name='null', category='null', publisher='null',  oneMonthCost='0', status='null'}, subscriptionPeriod=1, totalSum=10, creationDate=2017-05-05T12:42:49Z, paymentDate=2017-05-05T12:42:55.706Z, status=PAID}
+2017-05-05 15:42:55 DEBUG InvoiceServiceImpl:82 - commit transaction
+2017-05-05 15:42:55 DEBUG TransactionHelper:54 - commit
+2017-05-05 15:42:55 DEBUG ConnectionProxyImpl:43 - Transaction committed
+2017-05-05 15:42:55 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:42:55 INFO  HttpUtil:76 - getting user for session: 497A5A3C12FC582EB619D9DB7A054B64
+2017-05-05 15:42:55 INFO  UserServiceImpl:34 - setting role to user: user11
+2017-05-05 15:42:55 DEBUG UserServiceImpl:38 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:55 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:42:55 INFO  HttpUtil:76 - getting user for session: 497A5A3C12FC582EB619D9DB7A054B64
+2017-05-05 15:42:55 DEBUG SubscriptionServiceImpl:31 - checking subscription time with current: 2017-05-05T12:42:55.844Z
+2017-05-05 15:42:55 DEBUG SubscriptionServiceImpl:32 - checking subscription time  2017-06-05T15:42:56Z
+2017-05-05 15:42:55 DEBUG PeriodicalServiceImpl:25 - looking for an periodical with id:11
+2017-05-05 15:42:55 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:55 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:55 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:42:55 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:23 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:43:23 INFO  HttpUtil:76 - getting user for session: 497A5A3C12FC582EB619D9DB7A054B64
+2017-05-05 15:43:23 INFO  UserServiceImpl:34 - setting role to user: user11
+2017-05-05 15:43:23 DEBUG UserServiceImpl:38 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:23 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:43:23 INFO  HttpUtil:76 - getting user for session: 497A5A3C12FC582EB619D9DB7A054B64
+2017-05-05 15:43:23 INFO  UserServiceImpl:34 - setting role to user: user11
+2017-05-05 15:43:23 DEBUG UserServiceImpl:38 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:23 DEBUG PeriodicalServiceImpl:25 - looking for an periodical with id:11
+2017-05-05 15:43:23 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:23 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:23 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:23 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:23 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:23 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:23 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:23 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:23 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:23 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:25 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:43:25 INFO  HttpUtil:76 - getting user for session: 497A5A3C12FC582EB619D9DB7A054B64
+2017-05-05 15:43:25 INFO  UserServiceImpl:34 - setting role to user: user11
+2017-05-05 15:43:25 DEBUG UserServiceImpl:38 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:25 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:43:25 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:25 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:25 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:25 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:25 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:25 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:25 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:25 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:25 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:25 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:25 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:25 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:25 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:25 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:25 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:25 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:25 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:25 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:25 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:25 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:26 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:43:26 INFO  HttpUtil:76 - getting user for session: 497A5A3C12FC582EB619D9DB7A054B64
+2017-05-05 15:43:26 INFO  UserServiceImpl:34 - setting role to user: user11
+2017-05-05 15:43:26 DEBUG UserServiceImpl:38 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:26 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:43:26 INFO  HttpUtil:76 - getting user for session: 497A5A3C12FC582EB619D9DB7A054B64
+2017-05-05 15:43:26 DEBUG SubscriptionServiceImpl:31 - checking subscription time with current: 2017-05-05T12:43:26.598Z
+2017-05-05 15:43:26 DEBUG SubscriptionServiceImpl:32 - checking subscription time  2017-06-05T15:42:56Z
+2017-05-05 15:43:26 DEBUG PeriodicalServiceImpl:25 - looking for an periodical with id:11
+2017-05-05 15:43:26 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:26 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:26 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:26 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:28 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:43:28 INFO  HttpUtil:76 - getting user for session: 497A5A3C12FC582EB619D9DB7A054B64
+2017-05-05 15:43:28 INFO  UserServiceImpl:34 - setting role to user: user11
+2017-05-05 15:43:28 DEBUG UserServiceImpl:38 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:28 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:43:32 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:43:32 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:43:32 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:43:32 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:32 DEBUG SignIn:63 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:32 DEBUG SignIn:64 - pass: 123456
+2017-05-05 15:43:32 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:43:32 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:32 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:43:32 INFO  HttpUtil:76 - getting user for session: 14E10CA861157BDC1870C3AD9D6DA942
+2017-05-05 15:43:32 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:43:32 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:32 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:43:32 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:32 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:32 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:32 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:33 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:43:33 INFO  HttpUtil:76 - getting user for session: 14E10CA861157BDC1870C3AD9D6DA942
+2017-05-05 15:43:33 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:43:33 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:33 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:43:33 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:33 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:33 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:33 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:33 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:33 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:33 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:33 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:33 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:33 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:33 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:33 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:33 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:33 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:33 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:33 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:33 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:33 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:33 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:33 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:33 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:33 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:33 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:33 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:34 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:43:34 INFO  HttpUtil:76 - getting user for session: 14E10CA861157BDC1870C3AD9D6DA942
+2017-05-05 15:43:34 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:43:34 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:34 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:43:34 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:34 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:34 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:34 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:39 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:43:39 INFO  HttpUtil:76 - getting user for session: 14E10CA861157BDC1870C3AD9D6DA942
+2017-05-05 15:43:40 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:43:40 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:40 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:43:40 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:40 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:40 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:40 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:40 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:40 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:40 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:40 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:40 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:40 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:40 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:40 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:40 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:40 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:40 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:40 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:40 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:40 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:40 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:40 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:40 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:40 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:40 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:40 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:41 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:43:41 INFO  HttpUtil:76 - getting user for session: 14E10CA861157BDC1870C3AD9D6DA942
+2017-05-05 15:43:41 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:43:41 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:41 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:43:41 DEBUG DisplayAllUsers:26 - find: 12 users
+2017-05-05 15:43:42 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:42 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:42 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:42 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:46 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:43:46 INFO  HttpUtil:76 - getting user for session: 14E10CA861157BDC1870C3AD9D6DA942
+2017-05-05 15:43:46 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:43:46 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:46 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:43:47 INFO  UserServiceImpl:34 - setting role to user: user11
+2017-05-05 15:43:47 DEBUG UserServiceImpl:38 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:47 DEBUG ChangeStatus:32 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:43:47 DEBUG ChangeStatus:45 - blocking user id:30
+2017-05-05 15:43:47 DEBUG UserServiceImpl:102 - inside userService update id:30
+2017-05-05 15:43:47 DEBUG UserServiceImpl:104 - updating result1
+2017-05-05 15:43:47 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:43:47 INFO  HttpUtil:76 - getting user for session: 14E10CA861157BDC1870C3AD9D6DA942
+2017-05-05 15:43:47 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:43:47 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:47 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:43:47 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:47 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:47 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:47 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:48 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:43:48 INFO  HttpUtil:76 - getting user for session: 14E10CA861157BDC1870C3AD9D6DA942
+2017-05-05 15:43:48 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:43:48 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:48 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:43:48 DEBUG DisplayAllUsers:26 - find: 12 users
+2017-05-05 15:43:48 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:48 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:48 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:48 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:51 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:43:51 INFO  HttpUtil:76 - getting user for session: 14E10CA861157BDC1870C3AD9D6DA942
+2017-05-05 15:43:51 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:43:51 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:43:51 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:44:03 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:44:03 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:44:03 INFO  UserServiceImpl:34 - setting role to user: user11
+2017-05-05 15:44:03 DEBUG UserServiceImpl:38 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=blocked, role=subscriber}
+2017-05-05 15:44:03 DEBUG SignIn:63 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=blocked, role=subscriber}
+2017-05-05 15:44:03 DEBUG SignIn:64 - pass: 123456
+2017-05-05 15:44:03 INFO  UserServiceImpl:34 - setting role to user: user11
+2017-05-05 15:44:03 DEBUG UserServiceImpl:38 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=blocked, role=subscriber}
+2017-05-05 15:44:07 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:44:07 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:44:08 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:44:08 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:08 DEBUG SignIn:63 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:08 DEBUG SignIn:64 - pass: 123456
+2017-05-05 15:44:08 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:44:08 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:08 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:44:08 INFO  HttpUtil:76 - getting user for session: ADDB3E55E3D6D68DD3BBFB81CCE8B7B7
+2017-05-05 15:44:08 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:44:08 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:08 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:44:08 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:08 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:08 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:08 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:09 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:44:09 INFO  HttpUtil:76 - getting user for session: ADDB3E55E3D6D68DD3BBFB81CCE8B7B7
+2017-05-05 15:44:09 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:44:09 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:09 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:44:09 DEBUG DisplayAllUsers:26 - find: 12 users
+2017-05-05 15:44:09 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:09 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:09 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:09 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:11 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:44:11 INFO  HttpUtil:76 - getting user for session: ADDB3E55E3D6D68DD3BBFB81CCE8B7B7
+2017-05-05 15:44:11 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:44:11 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:11 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:44:11 INFO  UserServiceImpl:34 - setting role to user: user11
+2017-05-05 15:44:11 DEBUG UserServiceImpl:38 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=blocked, role=subscriber}
+2017-05-05 15:44:11 DEBUG ChangeStatus:32 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=blocked, role=subscriber}
+2017-05-05 15:44:11 DEBUG ChangeStatus:49 - activating user id: 30
+2017-05-05 15:44:11 DEBUG UserServiceImpl:102 - inside userService update id:30
+2017-05-05 15:44:11 DEBUG UserServiceImpl:104 - updating result1
+2017-05-05 15:44:11 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:44:11 INFO  HttpUtil:76 - getting user for session: ADDB3E55E3D6D68DD3BBFB81CCE8B7B7
+2017-05-05 15:44:11 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:44:11 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:11 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:44:11 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:11 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:11 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:11 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:13 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:44:13 INFO  HttpUtil:76 - getting user for session: ADDB3E55E3D6D68DD3BBFB81CCE8B7B7
+2017-05-05 15:44:13 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:44:13 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:13 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:44:13 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:13 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:13 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:13 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:14 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:44:14 INFO  HttpUtil:76 - getting user for session: ADDB3E55E3D6D68DD3BBFB81CCE8B7B7
+2017-05-05 15:44:14 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:44:14 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:14 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:44:22 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:44:22 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:44:22 INFO  UserServiceImpl:34 - setting role to user: user11
+2017-05-05 15:44:22 DEBUG UserServiceImpl:38 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:44:22 DEBUG SignIn:63 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:44:22 DEBUG SignIn:64 - pass: 123456
+2017-05-05 15:44:22 INFO  UserServiceImpl:34 - setting role to user: user11
+2017-05-05 15:44:22 DEBUG UserServiceImpl:38 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:44:22 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:44:22 INFO  HttpUtil:76 - getting user for session: 77DCA06916424DED10313A1DF6A81CCB
+2017-05-05 15:44:22 INFO  UserServiceImpl:34 - setting role to user: user11
+2017-05-05 15:44:22 DEBUG UserServiceImpl:38 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:44:22 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:44:22 INFO  HttpUtil:76 - getting user for session: 77DCA06916424DED10313A1DF6A81CCB
+2017-05-05 15:44:22 DEBUG SubscriptionServiceImpl:31 - checking subscription time with current: 2017-05-05T12:44:22.624Z
+2017-05-05 15:44:22 DEBUG SubscriptionServiceImpl:32 - checking subscription time  2017-06-05T15:42:56Z
+2017-05-05 15:44:22 DEBUG PeriodicalServiceImpl:25 - looking for an periodical with id:11
+2017-05-05 15:44:22 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:44:22 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:44:22 DEBUG AuthorizationTag:26 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:44:22 DEBUG AuthorizationTag:27 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:44:23 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:44:23 INFO  HttpUtil:76 - getting user for session: 77DCA06916424DED10313A1DF6A81CCB
+2017-05-05 15:44:23 INFO  UserServiceImpl:34 - setting role to user: user11
+2017-05-05 15:44:23 DEBUG UserServiceImpl:38 - User{id=30,username='user11' firstName='Пользователь 11', lastName='Фамилия', email='user11@gmail.com', address='address', status=active, role=subscriber}
+2017-05-05 15:44:23 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:44:27 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:44:27 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:44:27 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:44:27 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:27 DEBUG SignIn:63 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:27 DEBUG SignIn:64 - pass: 123456
+2017-05-05 15:44:27 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:44:27 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:27 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:44:27 INFO  HttpUtil:76 - getting user for session: 2F725284249A0D9B2E922ED01F68FD4E
+2017-05-05 15:44:27 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:44:27 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:27 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:44:27 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:27 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:27 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:27 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:29 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:44:29 INFO  HttpUtil:76 - getting user for session: 2F725284249A0D9B2E922ED01F68FD4E
+2017-05-05 15:44:29 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:44:29 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:29 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:44:29 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:29 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:29 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:29 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:29 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:29 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:29 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:29 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:29 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:29 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:29 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:29 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:29 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:29 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:29 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:29 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:29 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:29 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:29 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:29 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:29 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:29 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:29 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:29 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:30 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:44:30 INFO  HttpUtil:76 - getting user for session: 2F725284249A0D9B2E922ED01F68FD4E
+2017-05-05 15:44:30 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:44:30 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:30 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:44:30 DEBUG DisplayNewPeriodicalPage:37 - entityId: null
+2017-05-05 15:44:30 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:30 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:30 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:30 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:49 DEBUG EncodingFilter:24 - encoding: charset UTF-8
+2017-05-05 15:44:49 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:44:49 DEBUG PeriodicalNameValidator:61 - id:0
+2017-05-05 15:44:49 DEBUG PeriodicalNameValidator:64 - periodical id: 0
+2017-05-05 15:44:54 DEBUG EncodingFilter:24 - encoding: charset UTF-8
+2017-05-05 15:44:54 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:44:57 DEBUG EncodingFilter:24 - encoding: charset UTF-8
+2017-05-05 15:44:57 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:44:59 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:44:59 INFO  HttpUtil:76 - getting user for session: 2F725284249A0D9B2E922ED01F68FD4E
+2017-05-05 15:44:59 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:44:59 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:59 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:44:59 DEBUG PersistOnePeriodical:45 - after getting periodical: Periodical{id=0, name='Habrahabr', category='SCIENCE', publisher='Admin',  oneMonthCost='3', status='ACTIVE'}
+2017-05-05 15:44:59 DEBUG PeriodicalNameValidator:61 - id:0
+2017-05-05 15:44:59 DEBUG PeriodicalNameValidator:64 - periodical id: 0
+2017-05-05 15:44:59 DEBUG PeriodicalServiceImpl:25 - looking for an periodical with id:0
+2017-05-05 15:44:59 DEBUG PeriodicalServiceImpl:25 - looking for an periodical with id:0
+2017-05-05 15:44:59 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:59 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:59 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:59 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:59 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:59 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:59 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:59 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:59 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:59 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:59 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:59 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:59 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:59 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:59 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:59 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:59 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:59 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:59 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:59 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:59 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:59 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:59 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:59 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:59 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:44:59 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:03 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:45:03 INFO  HttpUtil:76 - getting user for session: 2F725284249A0D9B2E922ED01F68FD4E
+2017-05-05 15:45:03 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:45:03 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:03 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:45:03 INFO  HttpUtil:76 - getting user for session: 2F725284249A0D9B2E922ED01F68FD4E
+2017-05-05 15:45:03 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:45:03 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:03 DEBUG PeriodicalServiceImpl:25 - looking for an periodical with id:16
+2017-05-05 15:45:03 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:03 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:03 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:03 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:03 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:03 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:03 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:03 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:03 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:03 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:04 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:45:04 INFO  HttpUtil:76 - getting user for session: 2F725284249A0D9B2E922ED01F68FD4E
+2017-05-05 15:45:04 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:45:04 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:04 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:45:04 DEBUG PeriodicalServiceImpl:25 - looking for an periodical with id:16
+2017-05-05 15:45:04 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:04 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:04 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:04 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:13 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:45:13 INFO  HttpUtil:76 - getting user for session: 2F725284249A0D9B2E922ED01F68FD4E
+2017-05-05 15:45:13 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:45:13 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:13 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:45:13 DEBUG PersistOnePeriodical:45 - after getting periodical: Periodical{id=16, name='Habrahabr', category='SCIENCE', publisher='Admin',  oneMonthCost='3', status='ACTIVE'}
+2017-05-05 15:45:13 DEBUG PeriodicalNameValidator:61 - id:16
+2017-05-05 15:45:13 DEBUG PeriodicalNameValidator:64 - periodical id: 16
+2017-05-05 15:45:13 DEBUG PeriodicalServiceImpl:25 - looking for an periodical with id:16
+2017-05-05 15:45:13 DEBUG PeriodicalServiceImpl:25 - looking for an periodical with id:16
+2017-05-05 15:45:13 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:13 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:13 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:13 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:13 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:13 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:13 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:13 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:13 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:13 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:13 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:13 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:13 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:13 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:13 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:13 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:13 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:13 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:13 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:13 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:13 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:13 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:13 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:13 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:13 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:13 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:15 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:45:15 INFO  HttpUtil:76 - getting user for session: 2F725284249A0D9B2E922ED01F68FD4E
+2017-05-05 15:45:15 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:45:15 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:15 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:45:15 INFO  HttpUtil:76 - getting user for session: 2F725284249A0D9B2E922ED01F68FD4E
+2017-05-05 15:45:15 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:45:15 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:15 DEBUG PeriodicalServiceImpl:25 - looking for an periodical with id:16
+2017-05-05 15:45:15 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:15 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:15 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:15 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:15 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:15 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:15 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:15 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:15 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:15 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:18 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:45:18 INFO  HttpUtil:76 - getting user for session: 2F725284249A0D9B2E922ED01F68FD4E
+2017-05-05 15:45:18 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:45:18 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:18 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:45:18 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:18 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:18 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:18 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:18 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:45:18 INFO  HttpUtil:76 - getting user for session: 2F725284249A0D9B2E922ED01F68FD4E
+2017-05-05 15:45:18 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:45:18 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:18 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:45:18 DEBUG DisplayAllUsers:26 - find: 12 users
+2017-05-05 15:45:18 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:18 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:18 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:18 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:19 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:45:19 INFO  HttpUtil:76 - getting user for session: 2F725284249A0D9B2E922ED01F68FD4E
+2017-05-05 15:45:19 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:45:19 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:19 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:45:19 INFO  HttpUtil:76 - getting user for session: 2F725284249A0D9B2E922ED01F68FD4E
+2017-05-05 15:45:19 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:19 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:19 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:19 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:21 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:45:21 INFO  HttpUtil:76 - getting user for session: 2F725284249A0D9B2E922ED01F68FD4E
+2017-05-05 15:45:21 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:45:21 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:21 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:45:22 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:45:22 INFO  HttpUtil:76 - getting user for session: 2F725284249A0D9B2E922ED01F68FD4E
+2017-05-05 15:45:22 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:45:22 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:45:22 DEBUG DisplayAllUsers:26 - find: 12 users
+2017-05-05 15:45:22 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:45:22 INFO  HttpUtil:76 - getting user for session: 2F725284249A0D9B2E922ED01F68FD4E
+2017-05-05 15:45:22 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:45:22 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:45:22 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:45:22 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:56:45 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:56:45 INFO  HttpUtil:76 - getting user for session: 2F725284249A0D9B2E922ED01F68FD4E
+2017-05-05 15:56:45 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:56:45 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:56:45 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:57:01 INFO  HttpUtil:76 - getting user for session: null
+2017-05-05 15:57:01 INFO  HttpUtil:76 - getting user for session: null
+2017-05-05 15:57:02 DEBUG InvoiceServiceImpl:54 - paying invoice... begin transaction
+2017-05-05 15:57:02 DEBUG ConnectionProxyImpl:31 - Transaction begun
+2017-05-05 15:57:02 DEBUG InvoiceServiceImpl:61 - 1: find user: 
+2017-05-05 15:57:02 DEBUG InvoiceServiceImpl:63 - user
+2017-05-05 15:57:02 DEBUG InvoiceServiceImpl:68 - 2: find subscription: subscription
+2017-05-05 15:57:02 DEBUG InvoiceServiceImpl:71 - 3: update invoice: Invoice{id=10, user=user, periodical=Periodical{id=5, name='null', category='null', publisher='null',  oneMonthCost='0', status='null'}, subscriptionPeriod=1, totalSum=0, creationDate=null, paymentDate=2017-05-05T12:57:02.494Z, status=PAID}
+2017-05-05 15:57:02 DEBUG InvoiceServiceImpl:82 - commit transaction
+2017-05-05 15:57:02 DEBUG TransactionHelper:54 - commit
+2017-05-05 15:57:02 DEBUG ConnectionProxyImpl:43 - Transaction committed
+2017-05-05 15:57:02 DEBUG InvoiceServiceImpl:54 - paying invoice... begin transaction
+2017-05-05 15:57:02 DEBUG ConnectionProxyImpl:31 - Transaction begun
+2017-05-05 15:57:02 DEBUG InvoiceServiceImpl:61 - 1: find user: 
+2017-05-05 15:57:02 DEBUG InvoiceServiceImpl:63 - user
+2017-05-05 15:57:02 DEBUG InvoiceServiceImpl:68 - 2: find subscription: subscription
+2017-05-05 15:57:02 DEBUG InvoiceServiceImpl:71 - 3: update invoice: Invoice{id=10, user=user, periodical=Periodical{id=5, name='null', category='null', publisher='null',  oneMonthCost='0', status='null'}, subscriptionPeriod=1, totalSum=0, creationDate=null, paymentDate=2017-05-05T12:57:02.541Z, status=PAID}
+2017-05-05 15:57:02 DEBUG InvoiceServiceImpl:82 - commit transaction
+2017-05-05 15:57:02 DEBUG TransactionHelper:54 - commit
+2017-05-05 15:57:02 DEBUG ConnectionProxyImpl:43 - Transaction committed
+2017-05-05 15:57:02 DEBUG InvoiceServiceImpl:54 - paying invoice... begin transaction
+2017-05-05 15:57:02 DEBUG ConnectionProxyImpl:31 - Transaction begun
+2017-05-05 15:57:02 DEBUG InvoiceServiceImpl:61 - 1: find user: 
+2017-05-05 15:57:02 DEBUG InvoiceServiceImpl:63 - user
+2017-05-05 15:57:02 DEBUG InvoiceServiceImpl:68 - 2: find subscription: subscription
+2017-05-05 15:57:02 DEBUG InvoiceServiceImpl:71 - 3: update invoice: Invoice{id=10, user=user, periodical=Periodical{id=5, name='null', category='null', publisher='null',  oneMonthCost='0', status='null'}, subscriptionPeriod=1, totalSum=0, creationDate=null, paymentDate=2017-05-05T12:57:02.571Z, status=PAID}
+2017-05-05 15:57:02 DEBUG TransactionHelper:45 - transaction rollback
+2017-05-05 15:57:02 DEBUG ConnectionProxyImpl:52 - trying to rollback transaction
+2017-05-05 15:57:02 DEBUG ConnectionProxyImpl:56 - rollback success
+2017-05-05 15:57:02 ERROR InvoiceServiceImpl:87 - Exception during paying invoice: com.tolochko.periodicals.model.dao.exception.DaoException
+2017-05-05 15:57:02 DEBUG SubscriptionServiceImpl:31 - checking subscription time with current: 2017-05-05T12:57:02.645Z
+2017-05-05 15:57:02 DEBUG SubscriptionServiceImpl:32 - checking subscription time  2017-05-05T12:57:02.644Z
+2017-05-05 15:57:02 DEBUG ConnectionProxyImpl:31 - Transaction begun
+2017-05-05 15:57:02 DEBUG TransactionHelper:45 - transaction rollback
+2017-05-05 15:57:02 DEBUG ConnectionProxyImpl:52 - trying to rollback transaction
+2017-05-05 15:57:02 DEBUG ConnectionProxyImpl:56 - rollback success
+2017-05-05 15:57:02 ERROR UserServiceImpl:85 - transaction failed
+com.tolochko.periodicals.model.dao.exception.DaoException
+2017-05-05 15:57:02 DEBUG ConnectionProxyImpl:31 - Transaction begun
+2017-05-05 15:57:02 DEBUG TransactionHelper:54 - commit
+2017-05-05 15:57:02 DEBUG ConnectionProxyImpl:43 - Transaction committed
+2017-05-05 15:57:02 INFO  UserServiceImpl:34 - setting role to user: null
+2017-05-05 15:57:02 DEBUG UserServiceImpl:38 - Mock for User, hashCode: 1256405521
+2017-05-05 15:57:02 INFO  UserServiceImpl:34 - setting role to user: null
+2017-05-05 15:57:02 DEBUG UserServiceImpl:38 - Mock for User, hashCode: 708153797
+2017-05-05 15:57:02 DEBUG ConnectionProxyImpl:31 - Transaction begun
+2017-05-05 15:57:02 DEBUG TransactionHelper:45 - transaction rollback
+2017-05-05 15:57:02 DEBUG ConnectionProxyImpl:52 - trying to rollback transaction
+2017-05-05 15:57:02 DEBUG ConnectionProxyImpl:56 - rollback success
+2017-05-05 15:57:26 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:57:27 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:57:27 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:57:27 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:57:27 DEBUG SignIn:63 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:57:27 DEBUG SignIn:64 - pass: 123456
+2017-05-05 15:57:27 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:57:27 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:57:27 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:57:27 INFO  HttpUtil:76 - getting user for session: 7D136D1AD62F33DA9E54E18C2311B8AA
+2017-05-05 15:57:27 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:57:27 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:57:27 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:57:27 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:57:27 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:57:27 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:57:27 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:57:28 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:57:28 INFO  HttpUtil:76 - getting user for session: 7D136D1AD62F33DA9E54E18C2311B8AA
+2017-05-05 15:57:28 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 15:57:28 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 15:57:28 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 15:59:57 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 15:59:57 INFO  HttpUtil:76 - getting user for session: 79511038681CAF801CB02228B5711209
+2017-05-05 16:00:00 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 16:00:00 INFO  HttpUtil:76 - getting user for session: 79511038681CAF801CB02228B5711209
+2017-05-05 16:00:02 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 16:00:02 INFO  HttpUtil:76 - getting user for session: 79511038681CAF801CB02228B5711209
+2017-05-05 16:00:44 INFO  HttpUtil:76 - getting user for session: null
+2017-05-05 16:00:45 INFO  HttpUtil:76 - getting user for session: null
+2017-05-05 16:00:46 DEBUG InvoiceServiceImpl:54 - paying invoice... begin transaction
+2017-05-05 16:00:46 DEBUG ConnectionProxyImpl:31 - Transaction begun
+2017-05-05 16:00:46 DEBUG InvoiceServiceImpl:61 - 1: find user: 
+2017-05-05 16:00:46 DEBUG InvoiceServiceImpl:63 - user
+2017-05-05 16:00:46 DEBUG InvoiceServiceImpl:68 - 2: find subscription: subscription
+2017-05-05 16:00:46 DEBUG InvoiceServiceImpl:71 - 3: update invoice: Invoice{id=10, user=user, periodical=Periodical{id=5, name='null', category='null', publisher='null',  oneMonthCost='0', status='null'}, subscriptionPeriod=1, totalSum=0, creationDate=null, paymentDate=2017-05-05T13:00:46.048Z, status=PAID}
+2017-05-05 16:00:46 DEBUG InvoiceServiceImpl:82 - commit transaction
+2017-05-05 16:00:46 DEBUG TransactionHelper:54 - commit
+2017-05-05 16:00:46 DEBUG ConnectionProxyImpl:43 - Transaction committed
+2017-05-05 16:00:46 DEBUG InvoiceServiceImpl:54 - paying invoice... begin transaction
+2017-05-05 16:00:46 DEBUG ConnectionProxyImpl:31 - Transaction begun
+2017-05-05 16:00:46 DEBUG InvoiceServiceImpl:61 - 1: find user: 
+2017-05-05 16:00:46 DEBUG InvoiceServiceImpl:63 - user
+2017-05-05 16:00:46 DEBUG InvoiceServiceImpl:68 - 2: find subscription: subscription
+2017-05-05 16:00:46 DEBUG InvoiceServiceImpl:71 - 3: update invoice: Invoice{id=10, user=user, periodical=Periodical{id=5, name='null', category='null', publisher='null',  oneMonthCost='0', status='null'}, subscriptionPeriod=1, totalSum=0, creationDate=null, paymentDate=2017-05-05T13:00:46.098Z, status=PAID}
+2017-05-05 16:00:46 DEBUG InvoiceServiceImpl:82 - commit transaction
+2017-05-05 16:00:46 DEBUG TransactionHelper:54 - commit
+2017-05-05 16:00:46 DEBUG ConnectionProxyImpl:43 - Transaction committed
+2017-05-05 16:00:46 DEBUG InvoiceServiceImpl:54 - paying invoice... begin transaction
+2017-05-05 16:00:46 DEBUG ConnectionProxyImpl:31 - Transaction begun
+2017-05-05 16:00:46 DEBUG InvoiceServiceImpl:61 - 1: find user: 
+2017-05-05 16:00:46 DEBUG InvoiceServiceImpl:63 - user
+2017-05-05 16:00:46 DEBUG InvoiceServiceImpl:68 - 2: find subscription: subscription
+2017-05-05 16:00:46 DEBUG InvoiceServiceImpl:71 - 3: update invoice: Invoice{id=10, user=user, periodical=Periodical{id=5, name='null', category='null', publisher='null',  oneMonthCost='0', status='null'}, subscriptionPeriod=1, totalSum=0, creationDate=null, paymentDate=2017-05-05T13:00:46.113Z, status=PAID}
+2017-05-05 16:00:46 DEBUG TransactionHelper:45 - transaction rollback
+2017-05-05 16:00:46 DEBUG ConnectionProxyImpl:52 - trying to rollback transaction
+2017-05-05 16:00:46 DEBUG ConnectionProxyImpl:56 - rollback success
+2017-05-05 16:00:46 ERROR InvoiceServiceImpl:87 - Exception during paying invoice: com.tolochko.periodicals.model.dao.exception.DaoException
+2017-05-05 16:00:46 DEBUG SubscriptionServiceImpl:31 - checking subscription time with current: 2017-05-05T13:00:46.181Z
+2017-05-05 16:00:46 DEBUG SubscriptionServiceImpl:32 - checking subscription time  2017-05-05T13:00:46.180Z
+2017-05-05 16:00:46 DEBUG ConnectionProxyImpl:31 - Transaction begun
+2017-05-05 16:00:46 DEBUG TransactionHelper:45 - transaction rollback
+2017-05-05 16:00:46 DEBUG ConnectionProxyImpl:52 - trying to rollback transaction
+2017-05-05 16:00:46 DEBUG ConnectionProxyImpl:56 - rollback success
+2017-05-05 16:00:46 ERROR UserServiceImpl:85 - transaction failed
+com.tolochko.periodicals.model.dao.exception.DaoException
+2017-05-05 16:00:46 DEBUG ConnectionProxyImpl:31 - Transaction begun
+2017-05-05 16:00:46 DEBUG TransactionHelper:54 - commit
+2017-05-05 16:00:46 DEBUG ConnectionProxyImpl:43 - Transaction committed
+2017-05-05 16:00:46 INFO  UserServiceImpl:34 - setting role to user: null
+2017-05-05 16:00:46 DEBUG UserServiceImpl:38 - Mock for User, hashCode: 1256405521
+2017-05-05 16:00:46 INFO  UserServiceImpl:34 - setting role to user: null
+2017-05-05 16:00:46 DEBUG UserServiceImpl:38 - Mock for User, hashCode: 708153797
+2017-05-05 16:00:46 DEBUG ConnectionProxyImpl:31 - Transaction begun
+2017-05-05 16:00:46 DEBUG TransactionHelper:45 - transaction rollback
+2017-05-05 16:00:46 DEBUG ConnectionProxyImpl:52 - trying to rollback transaction
+2017-05-05 16:00:46 DEBUG ConnectionProxyImpl:56 - rollback success
+2017-05-05 16:01:20 INFO  HttpUtil:76 - getting user for session: null
+2017-05-05 16:01:20 INFO  HttpUtil:76 - getting user for session: null
+2017-05-05 16:01:21 DEBUG InvoiceServiceImpl:54 - paying invoice... begin transaction
+2017-05-05 16:01:21 DEBUG ConnectionProxyImpl:31 - Transaction begun
+2017-05-05 16:01:21 DEBUG InvoiceServiceImpl:61 - 1: find user: 
+2017-05-05 16:01:21 DEBUG InvoiceServiceImpl:63 - user
+2017-05-05 16:01:21 DEBUG InvoiceServiceImpl:68 - 2: find subscription: subscription
+2017-05-05 16:01:21 DEBUG InvoiceServiceImpl:71 - 3: update invoice: Invoice{id=10, user=user, periodical=Periodical{id=5, name='null', category='null', publisher='null',  oneMonthCost='0', status='null'}, subscriptionPeriod=1, totalSum=0, creationDate=null, paymentDate=2017-05-05T13:01:21.425Z, status=PAID}
+2017-05-05 16:01:21 DEBUG InvoiceServiceImpl:82 - commit transaction
+2017-05-05 16:01:21 DEBUG TransactionHelper:54 - commit
+2017-05-05 16:01:21 DEBUG ConnectionProxyImpl:43 - Transaction committed
+2017-05-05 16:01:21 DEBUG InvoiceServiceImpl:54 - paying invoice... begin transaction
+2017-05-05 16:01:21 DEBUG ConnectionProxyImpl:31 - Transaction begun
+2017-05-05 16:01:21 DEBUG InvoiceServiceImpl:61 - 1: find user: 
+2017-05-05 16:01:21 DEBUG InvoiceServiceImpl:63 - user
+2017-05-05 16:01:21 DEBUG InvoiceServiceImpl:68 - 2: find subscription: subscription
+2017-05-05 16:01:21 DEBUG InvoiceServiceImpl:71 - 3: update invoice: Invoice{id=10, user=user, periodical=Periodical{id=5, name='null', category='null', publisher='null',  oneMonthCost='0', status='null'}, subscriptionPeriod=1, totalSum=0, creationDate=null, paymentDate=2017-05-05T13:01:21.472Z, status=PAID}
+2017-05-05 16:01:21 DEBUG InvoiceServiceImpl:82 - commit transaction
+2017-05-05 16:01:21 DEBUG TransactionHelper:54 - commit
+2017-05-05 16:01:21 DEBUG ConnectionProxyImpl:43 - Transaction committed
+2017-05-05 16:01:21 DEBUG InvoiceServiceImpl:54 - paying invoice... begin transaction
+2017-05-05 16:01:21 DEBUG ConnectionProxyImpl:31 - Transaction begun
+2017-05-05 16:01:21 DEBUG InvoiceServiceImpl:61 - 1: find user: 
+2017-05-05 16:01:21 DEBUG InvoiceServiceImpl:63 - user
+2017-05-05 16:01:21 DEBUG InvoiceServiceImpl:68 - 2: find subscription: subscription
+2017-05-05 16:01:21 DEBUG InvoiceServiceImpl:71 - 3: update invoice: Invoice{id=10, user=user, periodical=Periodical{id=5, name='null', category='null', publisher='null',  oneMonthCost='0', status='null'}, subscriptionPeriod=1, totalSum=0, creationDate=null, paymentDate=2017-05-05T13:01:21.487Z, status=PAID}
+2017-05-05 16:01:21 DEBUG TransactionHelper:45 - transaction rollback
+2017-05-05 16:01:21 DEBUG ConnectionProxyImpl:52 - trying to rollback transaction
+2017-05-05 16:01:21 DEBUG ConnectionProxyImpl:56 - rollback success
+2017-05-05 16:01:21 ERROR InvoiceServiceImpl:87 - Exception during paying invoice: com.tolochko.periodicals.model.dao.exception.DaoException
+2017-05-05 16:01:21 DEBUG SubscriptionServiceImpl:31 - checking subscription time with current: 2017-05-05T13:01:21.574Z
+2017-05-05 16:01:21 DEBUG SubscriptionServiceImpl:32 - checking subscription time  2017-05-05T13:01:21.573Z
+2017-05-05 16:01:21 DEBUG ConnectionProxyImpl:31 - Transaction begun
+2017-05-05 16:01:21 DEBUG TransactionHelper:45 - transaction rollback
+2017-05-05 16:01:21 DEBUG ConnectionProxyImpl:52 - trying to rollback transaction
+2017-05-05 16:01:21 DEBUG ConnectionProxyImpl:56 - rollback success
+2017-05-05 16:01:21 ERROR UserServiceImpl:85 - transaction failed
+com.tolochko.periodicals.model.dao.exception.DaoException
+2017-05-05 16:01:21 DEBUG ConnectionProxyImpl:31 - Transaction begun
+2017-05-05 16:01:21 DEBUG TransactionHelper:54 - commit
+2017-05-05 16:01:21 DEBUG ConnectionProxyImpl:43 - Transaction committed
+2017-05-05 16:01:21 INFO  UserServiceImpl:34 - setting role to user: null
+2017-05-05 16:01:21 DEBUG UserServiceImpl:38 - Mock for User, hashCode: 1256405521
+2017-05-05 16:01:21 INFO  UserServiceImpl:34 - setting role to user: null
+2017-05-05 16:01:21 DEBUG UserServiceImpl:38 - Mock for User, hashCode: 708153797
+2017-05-05 16:01:21 DEBUG ConnectionProxyImpl:31 - Transaction begun
+2017-05-05 16:01:21 DEBUG TransactionHelper:45 - transaction rollback
+2017-05-05 16:01:21 DEBUG ConnectionProxyImpl:52 - trying to rollback transaction
+2017-05-05 16:01:21 DEBUG ConnectionProxyImpl:56 - rollback success
+2017-05-05 16:01:58 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 16:01:59 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 16:01:59 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 16:01:59 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 16:01:59 DEBUG SignIn:63 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 16:01:59 DEBUG SignIn:64 - pass: 123456
+2017-05-05 16:01:59 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 16:01:59 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 16:01:59 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 16:01:59 INFO  HttpUtil:76 - getting user for session: 6EE1E9DAF2E451C4DD463D88D52801CA
+2017-05-05 16:01:59 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 16:01:59 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 16:01:59 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 16:02:00 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 16:02:00 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 16:02:00 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 16:02:00 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 16:02:01 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 16:02:01 INFO  HttpUtil:76 - getting user for session: 6EE1E9DAF2E451C4DD463D88D52801CA
+2017-05-05 16:02:01 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 16:02:01 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 16:02:01 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 16:02:05 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 16:02:05 INFO  HttpUtil:76 - getting user for session: 57989772751D7997C44EE9ECE41AA083
+2017-05-05 16:23:04 INFO  HttpUtil:76 - getting user for session: null
+2017-05-05 16:23:05 INFO  HttpUtil:76 - getting user for session: null
+2017-05-05 16:23:05 DEBUG InvoiceServiceImpl:54 - paying invoice... begin transaction
+2017-05-05 16:23:05 DEBUG ConnectionProxyImpl:31 - Transaction begun
+2017-05-05 16:23:05 DEBUG InvoiceServiceImpl:61 - 1: find user: 
+2017-05-05 16:23:05 DEBUG InvoiceServiceImpl:63 - user
+2017-05-05 16:23:05 DEBUG InvoiceServiceImpl:68 - 2: find subscription: subscription
+2017-05-05 16:23:05 DEBUG InvoiceServiceImpl:71 - 3: update invoice: Invoice{id=10, user=user, periodical=Periodical{id=5, name='null', category='null', publisher='null',  oneMonthCost='0', status='null'}, subscriptionPeriod=1, totalSum=0, creationDate=null, paymentDate=2017-05-05T13:23:05.639Z, status=PAID}
+2017-05-05 16:23:05 DEBUG InvoiceServiceImpl:82 - commit transaction
+2017-05-05 16:23:05 DEBUG TransactionHelper:54 - commit
+2017-05-05 16:23:05 DEBUG ConnectionProxyImpl:43 - Transaction committed
+2017-05-05 16:23:05 DEBUG InvoiceServiceImpl:54 - paying invoice... begin transaction
+2017-05-05 16:23:05 DEBUG ConnectionProxyImpl:31 - Transaction begun
+2017-05-05 16:23:05 DEBUG InvoiceServiceImpl:61 - 1: find user: 
+2017-05-05 16:23:05 DEBUG InvoiceServiceImpl:63 - user
+2017-05-05 16:23:05 DEBUG InvoiceServiceImpl:68 - 2: find subscription: subscription
+2017-05-05 16:23:05 DEBUG InvoiceServiceImpl:71 - 3: update invoice: Invoice{id=10, user=user, periodical=Periodical{id=5, name='null', category='null', publisher='null',  oneMonthCost='0', status='null'}, subscriptionPeriod=1, totalSum=0, creationDate=null, paymentDate=2017-05-05T13:23:05.689Z, status=PAID}
+2017-05-05 16:23:05 DEBUG InvoiceServiceImpl:82 - commit transaction
+2017-05-05 16:23:05 DEBUG TransactionHelper:54 - commit
+2017-05-05 16:23:05 DEBUG ConnectionProxyImpl:43 - Transaction committed
+2017-05-05 16:23:05 DEBUG InvoiceServiceImpl:54 - paying invoice... begin transaction
+2017-05-05 16:23:05 DEBUG ConnectionProxyImpl:31 - Transaction begun
+2017-05-05 16:23:05 DEBUG InvoiceServiceImpl:61 - 1: find user: 
+2017-05-05 16:23:05 DEBUG InvoiceServiceImpl:63 - user
+2017-05-05 16:23:05 DEBUG InvoiceServiceImpl:68 - 2: find subscription: subscription
+2017-05-05 16:23:05 DEBUG InvoiceServiceImpl:71 - 3: update invoice: Invoice{id=10, user=user, periodical=Periodical{id=5, name='null', category='null', publisher='null',  oneMonthCost='0', status='null'}, subscriptionPeriod=1, totalSum=0, creationDate=null, paymentDate=2017-05-05T13:23:05.703Z, status=PAID}
+2017-05-05 16:23:05 DEBUG TransactionHelper:45 - transaction rollback
+2017-05-05 16:23:05 DEBUG ConnectionProxyImpl:52 - trying to rollback transaction
+2017-05-05 16:23:05 DEBUG ConnectionProxyImpl:56 - rollback success
+2017-05-05 16:23:05 ERROR InvoiceServiceImpl:87 - Exception during paying invoice: com.tolochko.periodicals.model.dao.exception.DaoException
+2017-05-05 16:23:05 DEBUG SubscriptionServiceImpl:31 - checking subscription time with current: 2017-05-05T13:23:05.798Z
+2017-05-05 16:23:05 DEBUG SubscriptionServiceImpl:32 - checking subscription time  2017-05-05T13:23:05.797Z
+2017-05-05 16:23:05 DEBUG ConnectionProxyImpl:31 - Transaction begun
+2017-05-05 16:23:05 DEBUG TransactionHelper:45 - transaction rollback
+2017-05-05 16:23:05 DEBUG ConnectionProxyImpl:52 - trying to rollback transaction
+2017-05-05 16:23:05 DEBUG ConnectionProxyImpl:56 - rollback success
+2017-05-05 16:23:05 ERROR UserServiceImpl:85 - transaction failed
+com.tolochko.periodicals.model.dao.exception.DaoException
+2017-05-05 16:23:05 DEBUG ConnectionProxyImpl:31 - Transaction begun
+2017-05-05 16:23:05 DEBUG TransactionHelper:54 - commit
+2017-05-05 16:23:05 DEBUG ConnectionProxyImpl:43 - Transaction committed
+2017-05-05 16:23:05 INFO  UserServiceImpl:34 - setting role to user: null
+2017-05-05 16:23:05 DEBUG UserServiceImpl:38 - Mock for User, hashCode: 1256405521
+2017-05-05 16:23:05 INFO  UserServiceImpl:34 - setting role to user: null
+2017-05-05 16:23:05 DEBUG UserServiceImpl:38 - Mock for User, hashCode: 708153797
+2017-05-05 16:23:05 DEBUG ConnectionProxyImpl:31 - Transaction begun
+2017-05-05 16:23:05 DEBUG TransactionHelper:45 - transaction rollback
+2017-05-05 16:23:05 DEBUG ConnectionProxyImpl:52 - trying to rollback transaction
+2017-05-05 16:23:05 DEBUG ConnectionProxyImpl:56 - rollback success
+2017-05-05 16:23:37 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 16:23:37 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 16:23:37 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 16:23:37 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 16:23:37 DEBUG SignIn:64 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 16:23:37 DEBUG SignIn:65 - pass: 123456
+2017-05-05 16:23:37 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 16:23:37 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 16:23:37 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 16:23:37 INFO  HttpUtil:76 - getting user for session: 6281BFC9DA0C33AC5603E5FC88402B3D
+2017-05-05 16:23:37 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 16:23:37 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 16:23:37 INFO  RequestProviderImpl:86 - found processor 
+2017-05-05 16:23:38 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 16:23:38 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 16:23:38 DEBUG AuthorizationTag:26 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 16:23:38 DEBUG AuthorizationTag:27 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 16:26:33 DEBUG EncodingFilter:24 - encoding: charset null
+2017-05-05 16:26:33 INFO  HttpUtil:76 - getting user for session: 6281BFC9DA0C33AC5603E5FC88402B3D
+2017-05-05 16:26:33 INFO  UserServiceImpl:34 - setting role to user: admin
+2017-05-05 16:26:33 DEBUG UserServiceImpl:38 - User{id=1,username='admin' firstName='Tymur', lastName='Tolochko', email='admin@gmail.com', address='address', status=active, role=admin}
+2017-05-05 16:26:33 INFO  RequestProviderImpl:86 - found processor 

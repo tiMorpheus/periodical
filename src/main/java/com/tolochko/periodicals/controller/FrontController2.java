@@ -1,10 +1,8 @@
 package com.tolochko.periodicals.controller;
 
 import com.tolochko.periodicals.controller.request.DispatchException;
-import com.tolochko.periodicals.controller.request.provider.RequestProvider;
 import com.tolochko.periodicals.controller.request.provider.impl.RequestProviderImpl;
 import com.tolochko.periodicals.controller.util.HttpUtil;
-import com.tolochko.periodicals.controller.view.ViewResolver;
 import com.tolochko.periodicals.controller.view.impl.JspViewResolver;
 import org.apache.log4j.Logger;
 
@@ -15,17 +13,23 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class FrontController extends HttpServlet {
+public class FrontController2 extends HttpServlet{
     private static final Logger logger = Logger.getLogger(FrontController.class);
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        processRequest(req, resp);
+        try {
+            String abstractViewName = RequestProviderImpl.getInstance().getRequestProcessor(req).process(req, resp);
+
+
+        } catch (Exception e) {
+            redirectUserToErrorPageAndLogException(req, resp, e);
+        }
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        processRequest(req, resp);
+
     }
 
     private void processRequest(HttpServletRequest req, HttpServletResponse resp) {
@@ -81,4 +85,5 @@ public class FrontController extends HttpServlet {
 
         HttpUtil.sendRedirect(req, resp, JspViewResolver.getInstance().resolvePublicViewName(HttpUtil.getExceptionViewName(e)));
     }
+
 }
