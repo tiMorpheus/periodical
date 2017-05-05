@@ -63,7 +63,6 @@ D:\code\Periodicals\src\main\java\com\tolochko\periodicals\model\dao\impl\Subscr
 D:\code\Periodicals\src\main\java\com\tolochko\periodicals\controller\validation\user\UserEmailValidator.java
 D:\code\Periodicals\src\main\java\com\tolochko\periodicals\model\domain\invoice\Invoice.java
 D:\code\Periodicals\src\main\java\com\tolochko\periodicals\controller\validation\periodical\PeriodicalPublisherValidator.java
-D:\code\Periodicals\src\main\java\com\tolochko\periodicals\controller\FrontController2.java
 D:\code\Periodicals\src\main\java\com\tolochko\periodicals\controller\request\user\DisplayCurrentUser.java
 D:\code\Periodicals\src\main\java\com\tolochko\periodicals\controller\request\DispatchException.java
 D:\code\Periodicals\src\main\java\com\tolochko\periodicals\model\connection\ConnectionProxyImpl.java

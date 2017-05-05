@@ -80,7 +80,11 @@ public class PeriodicalServiceImpl implements PeriodicalService {
 
     @Override
     public int deleteAllDiscarded() {
-            return factory.getPeriodicalDao().deleteAllDiscarded();
+        for (Periodical periodical: findAllByStatus(Periodical.Status.DISCARDED)) {
+            factory.getPeriodicalDao().addIntoArchive(periodical);
+        }
+
+        return factory.getPeriodicalDao().deleteAllDiscarded();
     }
 
     @Override

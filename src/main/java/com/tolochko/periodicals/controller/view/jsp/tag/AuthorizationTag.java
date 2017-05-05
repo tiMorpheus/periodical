@@ -24,7 +24,6 @@ public class AuthorizationTag extends TagSupport {
     public int doStartTag() throws JspException {
         user = getUserFromSession();
         logger.debug(user);
-        logger.debug(user);
 
         if (nonNull(user) && hasUserLegitRole()) {
 
@@ -49,7 +48,6 @@ public class AuthorizationTag extends TagSupport {
             return legitRole != null && legitRole.equals(userRole);
         }
     }
-
 
     private User.Role parseLegitRole() {
         return nonNull(mustHaveRole) ? User.Role.valueOf(mustHaveRole.toUpperCase()) : null;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="com.tolochko.periodicals.model.service.UserServiceImplTest" time="0.005" errors="0" skipped="0">
+<testsuite tests="6" failures="0" name="com.tolochko.periodicals.model.service.UserServiceImplTest" time="0.064" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_121\jre\bin"/>
@@ -65,10 +65,10 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.tolochko.periodicals.model.service.UserServiceImplTest" name="findAllUsers_Should_SetRolesAndReturnCorrectUser" time="0"/>
-  <testcase classname="com.tolochko.periodicals.model.service.UserServiceImplTest" name="createNewUser_Should_ThrowDaoException_And_RollbackTransaction_IfException" time="0.001"/>
+  <testcase classname="com.tolochko.periodicals.model.service.UserServiceImplTest" name="findAllUsers_Should_SetRolesAndReturnCorrectUser" time="0.033"/>
+  <testcase classname="com.tolochko.periodicals.model.service.UserServiceImplTest" name="createNewUser_Should_ThrowDaoException_And_RollbackTransaction_IfException" time="0.028"/>
   <testcase classname="com.tolochko.periodicals.model.service.UserServiceImplTest" name="createNewUser_Should_saveUserInDb_return_true" time="0.002"/>
-  <testcase classname="com.tolochko.periodicals.model.service.UserServiceImplTest" name="findOneUserById_Should_SetRolesAndReturnCorrectUser" time="0.001"/>
+  <testcase classname="com.tolochko.periodicals.model.service.UserServiceImplTest" name="findOneUserById_Should_SetRolesAndReturnCorrectUser" time="0"/>
   <testcase classname="com.tolochko.periodicals.model.service.UserServiceImplTest" name="findOneUserByUserName_Should_SetRolesAndReturnCorrectUser" time="0"/>
   <testcase classname="com.tolochko.periodicals.model.service.UserServiceImplTest" name="createNewUser_Should_ReturnFalse_And_RollbackTransaction_IfUserIsNotAdded" time="0.001"/>
 </testsuite>

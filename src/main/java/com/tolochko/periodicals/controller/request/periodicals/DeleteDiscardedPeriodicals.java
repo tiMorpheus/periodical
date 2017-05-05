@@ -26,8 +26,6 @@ public class DeleteDiscardedPeriodicals implements RequestProcessor {
     public String process(HttpServletRequest request, HttpServletResponse response) {
         List<FrontMessage> generalMessages = new ArrayList<>();
 
-        persistPeriodicalsToDeleteAndRelatedData();
-
         int deletedPeriodicalsNumber = periodicalService.deleteAllDiscarded();
         addDeleteResultMessage(generalMessages, deletedPeriodicalsNumber);
 
@@ -44,9 +42,6 @@ public class DeleteDiscardedPeriodicals implements RequestProcessor {
         generalMessages.add(message);
     }
 
-    private void persistPeriodicalsToDeleteAndRelatedData() {
-        /*Here goes implementation of persisting somehow deleted data. It can be serialization into
-        * files or saving into an archive database.*/
-    }
+
 
 }

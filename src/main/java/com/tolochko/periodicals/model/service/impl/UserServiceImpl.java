@@ -31,11 +31,7 @@ public class UserServiceImpl implements UserService {
 
     private void setUserRole(User user) {
         if (nonNull(user)) {
-            logger.info("setting role to user: " + user.getUsername());
-
             user.setRole(factory.getRoleDao().findRoleByUserName(user.getUsername()));
-
-            logger.debug(user);
         }
     }
 

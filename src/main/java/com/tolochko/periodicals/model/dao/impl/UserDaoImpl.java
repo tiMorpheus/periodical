@@ -61,12 +61,12 @@ public class UserDaoImpl implements UserDao {
         String query = "SELECT * FROM users WHERE id = ?";
 
         try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
-        PreparedStatement ps = connection.prepareStatement(query)) {
+             PreparedStatement ps = connection.prepareStatement(query)) {
             ps.setLong(1, id);
 
             try (ResultSet rs = ps.executeQuery()) {
 
-                if(rs.next()){
+                if (rs.next()) {
                     return DaoUtil.createUserFromResultSet(rs);
                 }
             }

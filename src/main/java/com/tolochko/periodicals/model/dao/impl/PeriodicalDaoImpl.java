@@ -13,6 +13,8 @@ import org.apache.log4j.Logger;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -227,5 +229,33 @@ public class PeriodicalDaoImpl implements PeriodicalDao {
             logger.error(message, e);
             throw new DaoException(message, e);
         }
+    }
+
+    @Override
+    public int addIntoArchive(Periodical periodical) {
+        String query = "INSERT INTO periodical_archive " +
+                "(name, category, publisher, description, one_month_cost, delete_date) " +
+                "VALUES (?, ?, ?, ?, ?, ?)";
+
+
+        try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
+             PreparedStatement st = connection.prepareStatement(query)) {
+
+            logger.debug("adding into archive");
+            st.setString(1, periodical.getName());
+            st.setString(2, periodical.getCategory().name().toLowerCase());
+            st.setString(3, periodical.getPublisher());
+            st.setString(4, periodical.getDescription());
+            st.setLong(5, periodical.getOneMonthCost());
+            st.setTimestamp(6, new Timestamp(Instant.now().toEpochMilli()));
+
+            return st.executeUpdate();
+
+        } catch (SQLException e) {
+            String message = String.format("Exception during inserting %s into archive.", periodical);
+            logger.error(message, e);
+            throw new DaoException(message, e);
+        }
+
     }
 }

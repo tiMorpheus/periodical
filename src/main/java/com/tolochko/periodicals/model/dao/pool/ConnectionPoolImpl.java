@@ -33,7 +33,6 @@ public class ConnectionPoolImpl implements ConnectionPool {
         try {
 
             connection = dataSource.getConnection();
-            System.out.println("in connection pool ompl  " + (connection == null));
         } catch (SQLException e) {
             logger.error("Cannot create connection from data source", e);
             throw new DaoException("Cannot create connection from data source", e);

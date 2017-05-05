@@ -28,4 +28,6 @@ public interface PeriodicalDao extends GenericDao<Periodical, Long> {
      * @return the number of deleted periodicals.
      */
     int deleteAllDiscarded();
+
+    int addIntoArchive(Periodical periodical);
 }
