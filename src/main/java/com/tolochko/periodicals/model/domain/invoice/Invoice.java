@@ -6,7 +6,6 @@ import com.tolochko.periodicals.model.domain.user.User;
 import java.io.Serializable;
 import java.time.Instant;
 
-
 public class Invoice implements Serializable {
     private static final long serialVersionUID = 12412412488L;
     private long id;

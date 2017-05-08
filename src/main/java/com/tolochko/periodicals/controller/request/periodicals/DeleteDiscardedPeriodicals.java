@@ -6,7 +6,6 @@ import com.tolochko.periodicals.controller.request.RequestProcessor;
 import com.tolochko.periodicals.controller.util.HttpUtil;
 import com.tolochko.periodicals.model.service.PeriodicalService;
 import com.tolochko.periodicals.model.service.ServiceFactory;
-import com.tolochko.periodicals.model.service.impl.PeriodicalServiceImpl;
 import com.tolochko.periodicals.model.service.impl.ServiceFactoryImpl;
 
 import javax.servlet.http.HttpServletRequest;
@@ -41,7 +40,6 @@ public class DeleteDiscardedPeriodicals implements RequestProcessor {
 
         generalMessages.add(message);
     }
-
 
 
 }

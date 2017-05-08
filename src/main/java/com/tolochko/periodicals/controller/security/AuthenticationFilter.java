@@ -1,6 +1,5 @@
 package com.tolochko.periodicals.controller.security;
 
-
 import com.tolochko.periodicals.controller.util.HttpUtil;
 import com.tolochko.periodicals.model.domain.user.User;
 

@@ -9,7 +9,6 @@ import com.tolochko.periodicals.model.domain.user.User;
 import com.tolochko.periodicals.model.service.ServiceFactory;
 import com.tolochko.periodicals.model.service.UserService;
 import com.tolochko.periodicals.model.service.impl.ServiceFactoryImpl;
-import com.tolochko.periodicals.model.service.impl.UserServiceImpl;
 import org.apache.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;

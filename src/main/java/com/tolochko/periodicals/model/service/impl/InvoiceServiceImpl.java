@@ -1,7 +1,6 @@
 package com.tolochko.periodicals.model.service.impl;
 
 import com.tolochko.periodicals.model.TransactionHelper;
-import com.tolochko.periodicals.model.connection.ConnectionProxy;
 import com.tolochko.periodicals.model.dao.exception.DaoException;
 import com.tolochko.periodicals.model.dao.factory.DaoFactory;
 import com.tolochko.periodicals.model.dao.factory.impl.MySqlDaoFactory;
@@ -22,7 +21,6 @@ import java.time.ZoneOffset;
 import java.util.List;
 
 import static java.util.Objects.isNull;
-
 
 public class InvoiceServiceImpl implements InvoiceService {
     private static final Logger logger = Logger.getLogger(InvoiceServiceImpl.class);
@@ -65,7 +63,7 @@ public class InvoiceServiceImpl implements InvoiceService {
 
             Subscription existingSubscription = subscriptionDao
                     .findOneByUserIdAndPeriodicalId(userFromDb.getId(), periodical.getId());
-            logger.debug("2: find subscription: "+ existingSubscription);
+            logger.debug("2: find subscription: " + existingSubscription);
 
             factory.getInvoiceDao().updateById(invoiceToPay.getId(), invoiceToPay);
             logger.debug("3: update invoice: " + invoiceToPay);

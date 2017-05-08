@@ -1,7 +1,6 @@
 package com.tolochko.periodicals.model.service.impl;
 
 import com.tolochko.periodicals.model.TransactionHelper;
-import com.tolochko.periodicals.model.connection.ConnectionProxy;
 import com.tolochko.periodicals.model.dao.exception.DaoException;
 import com.tolochko.periodicals.model.dao.factory.DaoFactory;
 import com.tolochko.periodicals.model.dao.factory.impl.MySqlDaoFactory;
@@ -12,7 +11,6 @@ import org.apache.log4j.Logger;
 import java.util.List;
 
 import static java.util.Objects.nonNull;
-
 
 public class UserServiceImpl implements UserService {
     private static final Logger logger = Logger.getLogger(UserServiceImpl.class);

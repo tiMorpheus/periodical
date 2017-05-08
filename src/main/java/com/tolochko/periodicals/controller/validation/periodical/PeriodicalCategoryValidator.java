@@ -1,6 +1,5 @@
 package com.tolochko.periodicals.controller.validation.periodical;
 
-
 import com.tolochko.periodicals.controller.validation.AbstractValidator;
 import com.tolochko.periodicals.controller.validation.ValidationResult;
 import com.tolochko.periodicals.model.domain.periodical.PeriodicalCategory;
@@ -17,9 +16,10 @@ public class PeriodicalCategoryValidator extends AbstractValidator {
     private static ValidationResult failedResult =
             new ValidationResult(412, "periodicalCategory.validationError");
 
-    private static final PeriodicalCategoryValidator instance=  new PeriodicalCategoryValidator();
+    private static final PeriodicalCategoryValidator instance = new PeriodicalCategoryValidator();
 
-    private PeriodicalCategoryValidator() {}
+    private PeriodicalCategoryValidator() {
+    }
 
 
     public static PeriodicalCategoryValidator getInstance() {

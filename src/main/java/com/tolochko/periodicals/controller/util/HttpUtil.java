@@ -9,7 +9,6 @@ import com.tolochko.periodicals.model.domain.user.User;
 import com.tolochko.periodicals.model.service.ServiceFactory;
 import com.tolochko.periodicals.model.service.UserService;
 import com.tolochko.periodicals.model.service.impl.ServiceFactoryImpl;
-import com.tolochko.periodicals.model.service.impl.UserServiceImpl;
 import org.apache.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
@@ -24,7 +23,7 @@ import java.util.regex.Pattern;
 
 import static java.util.Objects.nonNull;
 
-// helper class
+
 public final class HttpUtil {
     private static final Logger logger = Logger.getLogger(HttpUtil.class);
     private static ServiceFactory serviceFactory = ServiceFactoryImpl.getServiceFactoryInstance();
@@ -50,15 +49,10 @@ public final class HttpUtil {
         return "errors/error-page";
     }
 
-
-    /**
-     * Sends a redirect on this response.
-     */
     public static void sendRedirect(HttpServletRequest request, HttpServletResponse response,
                                     String redirectUri) {
         try {
             response.sendRedirect(redirectUri);
-
         } catch (IOException e) {
             String message = String.format("User id = %d. Exception during redirection to '%s'.",
                     HttpUtil.getUserIdFromSession(request), redirectUri);
@@ -144,9 +138,6 @@ public final class HttpUtil {
         return Integer.parseInt(matcher.group());
     }
 
-    /**
-     * Retrieves a user object from the db for the current user from the request.
-     */
     public static User getCurrentUserFromFromDb(HttpServletRequest request) {
         return userService.findOneById(getUserIdFromSession(request));
     }

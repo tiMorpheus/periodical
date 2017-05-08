@@ -5,6 +5,7 @@ import com.tolochko.periodicals.model.domain.user.User;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 /**
  * Processes a GET request to sing up the current user and redirects to a 'sing up' page.
  */

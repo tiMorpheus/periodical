@@ -31,12 +31,11 @@ CREATE TABLE IF NOT EXISTS `webproject`.`periodicals` (
   `description` VARCHAR(1000) NULL DEFAULT NULL,
   `one_month_cost` BIGINT(20) NULL DEFAULT NULL,
   `status` ENUM('active', 'inactive', 'discarded') NOT NULL,
-  PRIMARY KEY (`id`))
-  ENGINE = InnoDB
-  AUTO_INCREMENT = 7
-  DEFAULT CHARACTER SET = utf8;
-
-CREATE UNIQUE INDEX `name_UNIQUE` ON `webproject`.`periodicals` (`name` ASC);
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `name_UNIQUE` (`name` ASC))
+ENGINE = InnoDB
+AUTO_INCREMENT = 21
+DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
@@ -53,14 +52,12 @@ CREATE TABLE IF NOT EXISTS `webproject`.`users` (
   `address` VARCHAR(100) NULL DEFAULT NULL,
   `password` VARCHAR(64) NOT NULL,
   `status` ENUM('active', 'blocked') NULL DEFAULT NULL,
-  PRIMARY KEY (`id`))
-  ENGINE = InnoDB
-  AUTO_INCREMENT = 7
-  DEFAULT CHARACTER SET = utf8;
-
-CREATE UNIQUE INDEX `email` ON `webproject`.`users` (`email` ASC);
-
-CREATE UNIQUE INDEX `username_UNIQUE` ON `webproject`.`users` (`username` ASC);
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `email` (`email` ASC),
+  UNIQUE INDEX `username_UNIQUE` (`username` ASC))
+ENGINE = InnoDB
+AUTO_INCREMENT = 32
+DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
@@ -78,23 +75,40 @@ CREATE TABLE IF NOT EXISTS `webproject`.`invoices` (
   `payment_date` TIMESTAMP NULL DEFAULT NULL,
   `status` ENUM('new', 'paid') NOT NULL,
   PRIMARY KEY (`id`),
+  INDEX `u_invoice_fk_idx` (`user_id` ASC),
+  INDEX `p_invoice_fk_idx` (`periodical_id` ASC),
   CONSTRAINT `p_invoice_fk`
-  FOREIGN KEY (`periodical_id`)
-  REFERENCES `webproject`.`periodicals` (`id`)
+    FOREIGN KEY (`periodical_id`)
+    REFERENCES `webproject`.`periodicals` (`id`)
     ON DELETE CASCADE
     ON UPDATE NO ACTION,
   CONSTRAINT `u_invoice_fk`
-  FOREIGN KEY (`user_id`)
-  REFERENCES `webproject`.`users` (`id`)
+    FOREIGN KEY (`user_id`)
+    REFERENCES `webproject`.`users` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-  ENGINE = InnoDB
-  AUTO_INCREMENT = 10
-  DEFAULT CHARACTER SET = utf8;
+ENGINE = InnoDB
+AUTO_INCREMENT = 20
+DEFAULT CHARACTER SET = utf8;
 
-CREATE INDEX `u_invoice_fk_idx` ON `webproject`.`invoices` (`user_id` ASC);
 
-CREATE INDEX `p_invoice_fk_idx` ON `webproject`.`invoices` (`periodical_id` ASC);
+-- -----------------------------------------------------
+-- Table `webproject`.`periodical_archive`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `webproject`.`periodical_archive` ;
+
+CREATE TABLE IF NOT EXISTS `webproject`.`periodical_archive` (
+  `id` BIGINT(12) NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NULL DEFAULT NULL,
+  `category` VARCHAR(45) NULL DEFAULT NULL,
+  `publisher` VARCHAR(45) NULL DEFAULT NULL,
+  `description` VARCHAR(1000) NULL DEFAULT NULL,
+  `one_month_cost` BIGINT(20) NOT NULL,
+  `delete_date` TIMESTAMP NULL DEFAULT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 5
+DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
@@ -110,23 +124,21 @@ CREATE TABLE IF NOT EXISTS `webproject`.`subscriptions` (
   `end_date` TIMESTAMP NULL DEFAULT NULL,
   `status` ENUM('active', 'inactive') NOT NULL,
   PRIMARY KEY (`id`),
+  INDEX `periodicalId_fk_idx` (`periodical_id` ASC),
+  INDEX `userId_fk_idx` (`user_id` ASC),
   CONSTRAINT `periodicalId_fk`
-  FOREIGN KEY (`periodical_id`)
-  REFERENCES `webproject`.`periodicals` (`id`)
+    FOREIGN KEY (`periodical_id`)
+    REFERENCES `webproject`.`periodicals` (`id`)
     ON DELETE CASCADE
     ON UPDATE NO ACTION,
   CONSTRAINT `userId_fk`
-  FOREIGN KEY (`user_id`)
-  REFERENCES `webproject`.`users` (`id`)
+    FOREIGN KEY (`user_id`)
+    REFERENCES `webproject`.`users` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-  ENGINE = InnoDB
-  AUTO_INCREMENT = 5
-  DEFAULT CHARACTER SET = utf8;
-
-CREATE INDEX `periodicalId_fk_idx` ON `webproject`.`subscriptions` (`periodical_id` ASC);
-
-CREATE INDEX `userId_fk_idx` ON `webproject`.`subscriptions` (`user_id` ASC);
+ENGINE = InnoDB
+AUTO_INCREMENT = 13
+DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
@@ -138,15 +150,14 @@ CREATE TABLE IF NOT EXISTS `webproject`.`user_roles` (
   `user_id` BIGINT(11) NOT NULL,
   `name` ENUM('admin', 'subscriber') NOT NULL,
   PRIMARY KEY (`user_id`),
+  INDEX `user_id_idx` (`user_id` ASC),
   CONSTRAINT `user_id`
-  FOREIGN KEY (`user_id`)
-  REFERENCES `webproject`.`users` (`id`)
+    FOREIGN KEY (`user_id`)
+    REFERENCES `webproject`.`users` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-  ENGINE = InnoDB
-  DEFAULT CHARACTER SET = utf8;
-
-CREATE INDEX `user_id_idx` ON `webproject`.`user_roles` (`user_id` ASC);
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;

@@ -2,7 +2,6 @@ package com.tolochko.periodicals.controller.validation.user;
 
 import com.tolochko.periodicals.controller.validation.AbstractValidator;
 import com.tolochko.periodicals.controller.validation.ValidationResult;
-import com.tolochko.periodicals.model.domain.user.User;
 import com.tolochko.periodicals.model.service.ServiceFactory;
 import com.tolochko.periodicals.model.service.UserService;
 import com.tolochko.periodicals.model.service.impl.ServiceFactoryImpl;
@@ -17,7 +16,8 @@ public class UserNameValidator extends AbstractValidator {
     private static ValidationResult duplicationFailedResult =
             new ValidationResult(412, "validation.usernameIsNotUnique");
 
-   private UserNameValidator(){}
+    private UserNameValidator() {
+    }
 
     public static UserNameValidator getInstance() {
         return instance;

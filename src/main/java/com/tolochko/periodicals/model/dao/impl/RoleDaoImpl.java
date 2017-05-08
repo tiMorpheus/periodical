@@ -7,7 +7,6 @@ import com.tolochko.periodicals.model.dao.interfaces.RoleDao;
 import com.tolochko.periodicals.model.domain.user.User;
 import org.apache.log4j.Logger;
 
-import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;

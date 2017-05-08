@@ -16,7 +16,7 @@ import java.util.Date;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 
-public class FormatDatetimeTag extends TagSupport{
+public class FormatDatetimeTag extends TagSupport {
     private transient Temporal value;
     private String pattern = "dd.MM.YYYY HH:mm:ss";
     private String var;

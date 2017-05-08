@@ -24,12 +24,12 @@ import java.util.NoSuchElementException;
 import java.util.Optional;
 
 /**
- *  Provides mapping request uri to classes which work with user data
+ * Provides mapping request uri to classes which work with user data
  */
-public final class RequestProviderImpl implements RequestProvider, Serializable{
+public final class RequestProviderImpl implements RequestProvider, Serializable {
     private static final long serialVersionUID = 121213111888L;
     private static final Logger logger = Logger.getLogger(RequestProviderImpl.class);
-    private  Map<String, RequestProcessor> requestMapping = new HashMap<>();
+    private Map<String, RequestProcessor> requestMapping = new HashMap<>();
     private static final RequestProviderImpl instance = new RequestProviderImpl();
 
     private RequestProviderImpl() {

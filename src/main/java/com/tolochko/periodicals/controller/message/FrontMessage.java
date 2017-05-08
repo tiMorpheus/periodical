@@ -8,7 +8,7 @@ public final class FrontMessage implements Serializable {
     private String messageKey;
     private MessageType type;
 
-    enum MessageType implements Serializable{
+    enum MessageType implements Serializable {
         SUCCESS, INFO, WARNING, ERROR
     }
 

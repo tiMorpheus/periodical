@@ -1,6 +1,7 @@
 package com.tolochko.periodicals.model.domain.periodical;
 
 public enum PeriodicalCategory {
+
     BUSINESS("category.business"),
     SPORTS("category.sports"),
     SCIENCE("category.science"),

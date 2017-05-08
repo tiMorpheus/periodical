@@ -86,14 +86,14 @@ public class ConnectionPoolImpl implements ConnectionPool {
         }
 
 
-        public static void checkArgument(boolean expression,  Object errorMessage) {
+        public static void checkArgument(boolean expression, Object errorMessage) {
             if (!expression) {
                 logger.error(errorMessage);
                 throw new IllegalArgumentException(String.valueOf(errorMessage));
             }
         }
 
-        public static <T> T checkNotNull(T reference,  Object errorMessage) {
+        public static <T> T checkNotNull(T reference, Object errorMessage) {
             if (reference == null) {
                 logger.error(errorMessage);
                 throw new NullPointerException(String.valueOf(errorMessage));

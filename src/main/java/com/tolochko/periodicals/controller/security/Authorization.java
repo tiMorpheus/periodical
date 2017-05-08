@@ -4,7 +4,9 @@ import com.tolochko.periodicals.controller.util.HttpUtil;
 import com.tolochko.periodicals.model.domain.user.User;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -59,12 +61,12 @@ public final class Authorization {
         Matcher matcher = Pattern.compile("/app/users/\\d+").matcher(requestUri);
         boolean isValid = true;
 
-        if (matcher.find()){
+        if (matcher.find()) {
             long userIdFromUri = HttpUtil.getFirstIdFromUri(requestUri);
             long userIdFromSession = HttpUtil.getUserIdFromSession(request);
 
 
-            if (userIdFromSession == userIdFromUri){
+            if (userIdFromSession == userIdFromUri) {
                 isValid = true;
             } else {
                 isValid = false;

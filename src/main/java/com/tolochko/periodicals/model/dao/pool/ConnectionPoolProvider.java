@@ -13,9 +13,9 @@ public class ConnectionPoolProvider {
 
     private static ConnectionPoolProvider poolProvider = new ConnectionPoolProvider();
 
-    private  ConnectionPool instance;
+    private ConnectionPool instance;
 
-    private ConnectionPoolProvider(){
+    private ConnectionPoolProvider() {
         InputStream input;
         Properties properties = new Properties();
         try {

@@ -9,8 +9,6 @@ import com.tolochko.periodicals.model.domain.periodical.Periodical;
 import com.tolochko.periodicals.model.service.InvoiceService;
 import com.tolochko.periodicals.model.service.PeriodicalService;
 import com.tolochko.periodicals.model.service.ServiceFactory;
-import com.tolochko.periodicals.model.service.impl.InvoiceServiceImpl;
-import com.tolochko.periodicals.model.service.impl.PeriodicalServiceImpl;
 import com.tolochko.periodicals.model.service.impl.ServiceFactoryImpl;
 import org.apache.log4j.Logger;
 
@@ -21,7 +19,6 @@ import java.util.List;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
-
 
 /**
  * Processes a POST request to pay one invoice. In one transaction the status of the invoice is changed

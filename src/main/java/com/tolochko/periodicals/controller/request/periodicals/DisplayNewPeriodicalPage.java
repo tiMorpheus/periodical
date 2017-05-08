@@ -9,7 +9,6 @@ import org.apache.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import java.util.Map;
 
 import static java.util.Objects.nonNull;
@@ -17,7 +16,7 @@ import static java.util.Objects.nonNull;
 /**
  * Processes a GET request to a page where admin can create a new periodical.
  */
-public class DisplayNewPeriodicalPage implements RequestProcessor{
+public class DisplayNewPeriodicalPage implements RequestProcessor {
     private static final Logger logger = Logger.getLogger(DisplayNewPeriodicalPage.class);
     private static final String PERIODICAL_ATTRIBUTE = "periodical";
 

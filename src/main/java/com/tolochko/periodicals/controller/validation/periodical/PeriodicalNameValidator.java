@@ -6,7 +6,6 @@ import com.tolochko.periodicals.controller.validation.ValidationResult;
 import com.tolochko.periodicals.model.domain.periodical.Periodical;
 import com.tolochko.periodicals.model.service.PeriodicalService;
 import com.tolochko.periodicals.model.service.ServiceFactory;
-import com.tolochko.periodicals.model.service.impl.PeriodicalServiceImpl;
 import com.tolochko.periodicals.model.service.impl.ServiceFactoryImpl;
 import org.apache.log4j.Logger;
 
@@ -58,7 +57,7 @@ public class PeriodicalNameValidator extends AbstractValidator {
     private boolean isNameNotUnique(HttpServletRequest request, String periodicalName) {
         Periodical.OperationType operationType = getOperationType(request);
 
-        logger.debug("id:"+ request.getParameter("entityId"));
+        logger.debug("id:" + request.getParameter("entityId"));
         long periodicalId = Long.parseLong(request.getParameter("entityId"));
 
         logger.debug("periodical id: " + periodicalId);

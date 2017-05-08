@@ -6,8 +6,6 @@ import com.tolochko.periodicals.model.domain.PeriodicalNumberByCategory;
 import com.tolochko.periodicals.model.service.InvoiceService;
 import com.tolochko.periodicals.model.service.PeriodicalService;
 import com.tolochko.periodicals.model.service.ServiceFactory;
-import com.tolochko.periodicals.model.service.impl.InvoiceServiceImpl;
-import com.tolochko.periodicals.model.service.impl.PeriodicalServiceImpl;
 import com.tolochko.periodicals.model.service.impl.ServiceFactoryImpl;
 
 import javax.servlet.http.HttpServletRequest;
@@ -15,7 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
-
 
 /**
  * Processes a GET request to the Admin Panel page.

@@ -14,7 +14,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-
 public class PeriodicalServiceImpl implements PeriodicalService {
     private static final Logger logger = Logger.getLogger(PeriodicalServiceImpl.class);
     private DaoFactory factory = MySqlDaoFactory.getFactoryInstance();
@@ -22,24 +21,24 @@ public class PeriodicalServiceImpl implements PeriodicalService {
 
     @Override
     public Periodical findOneById(long id) {
-            logger.debug("looking for an periodical with id:" + id);
+        logger.debug("looking for an periodical with id:" + id);
 
-            return factory.getPeriodicalDao().findOneById(id);
+        return factory.getPeriodicalDao().findOneById(id);
     }
 
     @Override
     public Periodical findOneByName(String name) {
-            return factory.getPeriodicalDao().findOneByName(name);
+        return factory.getPeriodicalDao().findOneByName(name);
     }
 
     @Override
     public List<Periodical> findAll() {
-            return factory.getPeriodicalDao().findAll();
+        return factory.getPeriodicalDao().findAll();
     }
 
     @Override
     public List<Periodical> findAllByStatus(Periodical.Status status) {
-            return factory.getPeriodicalDao().findAllByStatus(status);
+        return factory.getPeriodicalDao().findAllByStatus(status);
     }
 
     @Override
@@ -56,31 +55,31 @@ public class PeriodicalServiceImpl implements PeriodicalService {
 
 
     private void createNewPeriodical(Periodical periodical) {
-            factory.getPeriodicalDao().add(periodical);
+        factory.getPeriodicalDao().add(periodical);
     }
 
     private void updatePeriodical(Periodical periodical) {
-            int affectedRows = factory.getPeriodicalDao().
-                    updateById(periodical.getId(), periodical);
+        int affectedRows = factory.getPeriodicalDao().
+                updateById(periodical.getId(), periodical);
 
-            if (affectedRows == 0) {
-                throw new NoSuchElementException(
-                        String.format("There is no periodical in the DB with id = %d", periodical.getId()));
-            }
+        if (affectedRows == 0) {
+            throw new NoSuchElementException(
+                    String.format("There is no periodical in the DB with id = %d", periodical.getId()));
+        }
     }
 
     private Periodical getPeriodicalFromDbByName(String name) {
-            return factory.getPeriodicalDao().findOneByName(name);
+        return factory.getPeriodicalDao().findOneByName(name);
     }
 
     @Override
     public int updateAndSetDiscarded(Periodical periodical) {
-            return factory.getPeriodicalDao().updateAndSetDiscarded(periodical);
+        return factory.getPeriodicalDao().updateAndSetDiscarded(periodical);
     }
 
     @Override
     public int deleteAllDiscarded() {
-        for (Periodical periodical: findAllByStatus(Periodical.Status.DISCARDED)) {
+        for (Periodical periodical : findAllByStatus(Periodical.Status.DISCARDED)) {
             factory.getPeriodicalDao().addIntoArchive(periodical);
         }
 
@@ -89,22 +88,22 @@ public class PeriodicalServiceImpl implements PeriodicalService {
 
     @Override
     public boolean hasActiveSubscriptions(long periodicalId) {
-            return !factory.getSubscriptionDao()
-                    .findAllByPeriodicalIdAndStatus(periodicalId, Subscription.Status.ACTIVE)
-                    .isEmpty();
+        return !factory.getSubscriptionDao()
+                .findAllByPeriodicalIdAndStatus(periodicalId, Subscription.Status.ACTIVE)
+                .isEmpty();
     }
 
     @Override
     public List<PeriodicalNumberByCategory> getQuantitativeStatistics() {
         List<PeriodicalNumberByCategory> statistics = new ArrayList<>();
 
-            PeriodicalDao dao = factory.getPeriodicalDao();
+        PeriodicalDao dao = factory.getPeriodicalDao();
 
-            for (PeriodicalCategory category : PeriodicalCategory.values()) {
-                statistics.add(getPeriodicalNumberByCategory(dao, category));
-            }
+        for (PeriodicalCategory category : PeriodicalCategory.values()) {
+            statistics.add(getPeriodicalNumberByCategory(dao, category));
+        }
 
-            return statistics;
+        return statistics;
     }
 
     private PeriodicalNumberByCategory getPeriodicalNumberByCategory(PeriodicalDao dao,

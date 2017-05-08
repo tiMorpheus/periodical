@@ -1,13 +1,11 @@
 package com.tolochko.periodicals.model.connection;
 
-import com.tolochko.periodicals.model.dao.exception.DaoException;
 import com.tolochko.periodicals.model.dao.exception.TransactionException;
 import org.apache.log4j.Logger;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-
 
 public class ConnectionProxyImpl implements ConnectionProxy {
     private static final Logger logger = Logger.getLogger(ConnectionProxyImpl.class);
@@ -62,7 +60,7 @@ public class ConnectionProxyImpl implements ConnectionProxy {
     @Override
     public void close() {
         try {
-            if (!transactionBegun){
+            if (!transactionBegun) {
                 connection.close();
             }
         } catch (SQLException e) {

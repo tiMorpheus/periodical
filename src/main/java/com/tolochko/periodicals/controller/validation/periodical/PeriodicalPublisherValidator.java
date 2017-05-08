@@ -17,7 +17,8 @@ public class PeriodicalPublisherValidator extends AbstractValidator {
     private static final String PERIODICAL_PUBLISHER_PATTERN_REGEX = "[а-яА-ЯіІїЇєЄёЁ\\w\\s-]{2,45}";
     private static final PeriodicalPublisherValidator instance = new PeriodicalPublisherValidator();
 
-    private PeriodicalPublisherValidator() {}
+    private PeriodicalPublisherValidator() {
+    }
 
 
     public static PeriodicalPublisherValidator getInstance() {

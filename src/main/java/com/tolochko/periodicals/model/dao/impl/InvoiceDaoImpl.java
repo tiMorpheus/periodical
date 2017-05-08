@@ -8,7 +8,10 @@ import com.tolochko.periodicals.model.dao.util.DaoUtil;
 import com.tolochko.periodicals.model.domain.invoice.Invoice;
 import org.apache.log4j.Logger;
 
-import java.sql.*;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
@@ -74,8 +77,8 @@ public class InvoiceDaoImpl implements InvoiceDao {
         String query = "SELECT SUM(total_sum) FROM invoices " +
                 "WHERE creation_date >= ? AND creation_date <= ?";
 
-        try (ConnectionProxy connection =TransactionHelper.getConnectionProxy();
-                PreparedStatement st = connection.prepareStatement(query)) {
+        try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
+             PreparedStatement st = connection.prepareStatement(query)) {
             st.setTimestamp(1, new Timestamp(since.toEpochMilli()));
             st.setTimestamp(2, new Timestamp(until.toEpochMilli()));
 
@@ -97,8 +100,8 @@ public class InvoiceDaoImpl implements InvoiceDao {
         String query = "SELECT SUM(total_sum) FROM invoices " +
                 "WHERE payment_date >= ? AND payment_date <= ? AND status = ?";
 
-        try (ConnectionProxy connection =TransactionHelper.getConnectionProxy();
-                PreparedStatement st = connection.prepareStatement(query)) {
+        try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
+             PreparedStatement st = connection.prepareStatement(query)) {
 
             st.setTimestamp(1, new Timestamp(since.toEpochMilli()));
             st.setTimestamp(2, new Timestamp(until.toEpochMilli()));
@@ -120,8 +123,8 @@ public class InvoiceDaoImpl implements InvoiceDao {
     public Invoice findOneById(Long id) {
         String query = "SELECT * FROM invoices WHERE id = ?";
 
-        try (ConnectionProxy connection =TransactionHelper.getConnectionProxy();
-                PreparedStatement st = connection.prepareStatement(query)) {
+        try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
+             PreparedStatement st = connection.prepareStatement(query)) {
             st.setLong(1, id);
 
             try (ResultSet rs = st.executeQuery()) {
@@ -143,8 +146,8 @@ public class InvoiceDaoImpl implements InvoiceDao {
                 "(user_id, periodical_id, period, total_sum, creation_date, payment_date, status) " +
                 "VALUES (?, ?, ?, ?, ?, ?, ?)";
 
-        try (ConnectionProxy connection =TransactionHelper.getConnectionProxy();
-                PreparedStatement st = connection.prepareStatement(query)) {
+        try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
+             PreparedStatement st = connection.prepareStatement(query)) {
 
             st.setLong(1, invoice.getUser().getId());
             st.setLong(2, invoice.getPeriodical().getId());
@@ -169,8 +172,8 @@ public class InvoiceDaoImpl implements InvoiceDao {
                 "SET user_id=?, periodical_id=?, period=?, total_sum=?, creation_date=?, " +
                 "payment_date=?, status=? WHERE id=?";
 
-        try (ConnectionProxy connection =TransactionHelper.getConnectionProxy();
-                PreparedStatement st = connection.prepareStatement(query)) {
+        try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
+             PreparedStatement st = connection.prepareStatement(query)) {
 
             st.setLong(1, invoice.getUser().getId());
             st.setLong(2, invoice.getPeriodical().getId());

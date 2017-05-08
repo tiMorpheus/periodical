@@ -8,7 +8,7 @@ import java.io.IOException;
 /**
  * Allows entering on the frontend and saving cyrillic symbols in the system.
  */
-public class EncodingFilter implements Filter{
+public class EncodingFilter implements Filter {
     private static final Logger logger = Logger.getLogger(EncodingFilter.class);
 
 

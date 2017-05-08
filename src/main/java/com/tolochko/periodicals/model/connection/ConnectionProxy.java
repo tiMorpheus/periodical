@@ -3,7 +3,7 @@ package com.tolochko.periodicals.model.connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public interface ConnectionProxy extends AutoCloseable{
+public interface ConnectionProxy extends AutoCloseable {
 
     /**
      * Defines begin of transaction.

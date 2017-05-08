@@ -50,8 +50,6 @@ public class UserServiceImplTest {
         when(factory.getUserDao()).thenReturn(userDao);
         when(factory.getRoleDao()).thenReturn(roleDao);
 
-
-
     }
 
     @Test
@@ -119,7 +117,6 @@ public class UserServiceImplTest {
         assertFalse(userService.createNewUser(user));
 
         TransactionHelper.beginTransaction();
-        verify(helper, times(1));
         verify(userDao, times(1)).add(user);
         verify(roleDao, times(1)).addRole(2l, User.Role.SUBSCRIBER);
     }

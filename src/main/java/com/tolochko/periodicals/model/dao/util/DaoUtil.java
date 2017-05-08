@@ -17,12 +17,14 @@ import static java.util.Objects.nonNull;
 
 public final class DaoUtil {
     private static final Logger logger = Logger.getLogger(DaoUtil.class);
-    private DaoUtil(){}
+
+    private DaoUtil() {
+    }
 
     /**
      * Creates a new user using the data from the result set.
      */
-    public static User createUserFromResultSet(ResultSet rs){
+    public static User createUserFromResultSet(ResultSet rs) {
         User.Builder userBuilder;
 
         try {
@@ -37,7 +39,7 @@ public final class DaoUtil {
                     .setStatus(User.Status.valueOf(rs.getString("status").toUpperCase()));
 
             return userBuilder.build();
-        } catch (SQLException e){
+        } catch (SQLException e) {
             logger.error("caught exception during creating user", e);
         }
 
@@ -47,7 +49,7 @@ public final class DaoUtil {
     /**
      * Creates a new periodical using the data from the result set.
      */
-    public static Periodical getPeriodicalFromResultSet(ResultSet rs)  {
+    public static Periodical getPeriodicalFromResultSet(ResultSet rs) {
         Periodical.Builder periodicalBuilder;
 
         try {
@@ -72,7 +74,7 @@ public final class DaoUtil {
     /**
      * Creates a new Subscription using the data from the result set.
      */
-    public static Subscription getSubscriptionFromRs(ResultSet rs){
+    public static Subscription getSubscriptionFromRs(ResultSet rs) {
 
         try {
             User.Builder userBuilder = new User.Builder();
@@ -120,7 +122,7 @@ public final class DaoUtil {
                     .setStatus(Invoice.Status.valueOf(rs.getString("invoices.status").toUpperCase()));
 
             return invoiceBuilder.build();
-        }catch (SQLException e){
+        } catch (SQLException e) {
             logger.error("I've caught error during creating invoice for result set", e);
             throw new DaoException(e);
         }

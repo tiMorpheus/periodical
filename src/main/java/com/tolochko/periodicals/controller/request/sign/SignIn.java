@@ -8,7 +8,6 @@ import com.tolochko.periodicals.model.domain.user.User;
 import com.tolochko.periodicals.model.service.ServiceFactory;
 import com.tolochko.periodicals.model.service.UserService;
 import com.tolochko.periodicals.model.service.impl.ServiceFactoryImpl;
-import com.tolochko.periodicals.model.service.impl.UserServiceImpl;
 import org.apache.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
@@ -29,7 +28,6 @@ public final class SignIn implements RequestProcessor {
     private UserService userService = serviceFactory.getUserService();
     private FrontMessageFactory messageFactory = FrontMessageFactory.getInstance();
     private static final String SIGN_IN_USERNAME = "signInUsername";
-
 
     @Override
     public String process(HttpServletRequest request, HttpServletResponse response) {
@@ -72,7 +70,7 @@ public final class SignIn implements RequestProcessor {
     /**
      * Checks user status
      *
-     * @param request http
+     * @param request  http
      * @param messages front messages
      * @return set error message and return login page uri if user is blocked
      */

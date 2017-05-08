@@ -6,7 +6,6 @@ import com.tolochko.periodicals.model.domain.periodical.Periodical;
 import com.tolochko.periodicals.model.domain.periodical.PeriodicalCategory;
 import com.tolochko.periodicals.model.service.PeriodicalService;
 import com.tolochko.periodicals.model.service.ServiceFactory;
-import com.tolochko.periodicals.model.service.impl.PeriodicalServiceImpl;
 import com.tolochko.periodicals.model.service.impl.ServiceFactoryImpl;
 import org.apache.log4j.Logger;
 

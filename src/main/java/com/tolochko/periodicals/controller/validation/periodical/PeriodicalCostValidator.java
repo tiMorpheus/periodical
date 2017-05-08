@@ -17,7 +17,8 @@ public class PeriodicalCostValidator extends AbstractValidator {
 
     private static final PeriodicalCostValidator instance = new PeriodicalCostValidator();
 
-    private PeriodicalCostValidator() {}
+    private PeriodicalCostValidator() {
+    }
 
 
     public static PeriodicalCostValidator getInstance() {

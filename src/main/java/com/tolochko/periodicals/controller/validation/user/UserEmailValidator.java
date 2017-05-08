@@ -5,7 +5,6 @@ import com.tolochko.periodicals.controller.validation.ValidationResult;
 import com.tolochko.periodicals.model.service.ServiceFactory;
 import com.tolochko.periodicals.model.service.UserService;
 import com.tolochko.periodicals.model.service.impl.ServiceFactoryImpl;
-import com.tolochko.periodicals.model.service.impl.UserServiceImpl;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Optional;
@@ -23,7 +22,9 @@ public class UserEmailValidator extends AbstractValidator {
             "^([a-z0-9_-]+\\.)*[a-z0-9_-]+@[a-z0-9_-]+(\\.[a-z0-9_-]+)*\\.[a-z]{2,6}$";
 
     private static final UserEmailValidator instance = new UserEmailValidator();
-    private UserEmailValidator() {}
+
+    private UserEmailValidator() {
+    }
 
     public static UserEmailValidator getInstance() {
         return instance;
