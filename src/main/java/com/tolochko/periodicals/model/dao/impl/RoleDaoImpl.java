@@ -14,15 +14,18 @@ import java.sql.SQLException;
 public class RoleDaoImpl implements RoleDao {
     private static final Logger logger = Logger.getLogger(RoleDaoImpl.class);
 
+    private static final String SELECT_ROLE_BY_USERNAME = "SELECT user_roles.name " +
+            "FROM users INNER JOIN user_roles " +
+            "ON (users.id = user_roles.user_id) " +
+            "WHERE users.username = ?";
+
+    private static final String INSERT_ROLE = "INSERT INTO user_roles " +
+            "(user_id, name) VALUES (?, ?)";
+
     @Override
     public User.Role findRoleByUserName(String userName) {
-        String query = "SELECT user_roles.name " +
-                "FROM users INNER JOIN user_roles " +
-                "ON (users.id = user_roles.user_id) " +
-                "WHERE users.username = ?";
-
         try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
-             PreparedStatement st = connection.prepareStatement(query)) {
+             PreparedStatement st = connection.prepareStatement(SELECT_ROLE_BY_USERNAME)) {
             st.setString(1, userName);
 
 
@@ -39,18 +42,16 @@ public class RoleDaoImpl implements RoleDao {
 
     @Override
     public void addRole(long userId, User.Role role) {
-        String query = "INSERT INTO user_roles " +
-                "(user_id, name) VALUES (?, ?)";
-
         try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
-             PreparedStatement st = connection.prepareStatement(query)) {
+             PreparedStatement st = connection.prepareStatement(INSERT_ROLE)) {
+
             st.setLong(1, userId);
             st.setString(2, role.toString());
 
             st.executeUpdate();
 
         } catch (SQLException e) {
-            String message = String.format("Exception during executing statement: '%s' for userId = %d", query, userId);
+            String message = String.format("Exception during executing statement for userId = %d", userId);
             logger.error(message, e);
             throw new DaoException(message, e);
         }

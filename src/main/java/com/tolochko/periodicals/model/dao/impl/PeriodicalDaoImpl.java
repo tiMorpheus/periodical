@@ -21,12 +21,42 @@ import java.util.List;
 public class PeriodicalDaoImpl implements PeriodicalDao {
     private static final Logger logger = Logger.getLogger(UserDaoImpl.class);
 
+    private static final String SELECT_PERIODICAL_BY_NAME = "SELECT * FROM periodicals WHERE name = ?";
+
+    private static final String SELECT_PERIODICAL_BY_STATUS = "SELECT * FROM periodicals WHERE status = ?";
+
+    private static final String SELECT_PERIODICAL_BY_ID = "SELECT * FROM periodicals WHERE id = ?";
+
+    private static final String SELECT_ALL_PERIODICAL = "SELECT * FROM periodicals";
+
+    private static final String FIND_COUNT_OF_PERIODICAL = "SELECT COUNT(id) FROM periodicals " +
+            "WHERE category = ? AND status = ?";
+
+    private static final String INSERT_PERIODICAL = "INSERT INTO periodicals " +
+            "(name, category, publisher, description, one_month_cost, status) " +
+            "VALUES (?, ?, ?, ?, ?, ?)";
+
+    private static final String UPDATE_PERIODICAL_BY_ID = "UPDATE periodicals " +
+            "SET name=?, category=?, publisher=?, description=?, one_month_cost=?, status=? " +
+            "WHERE id=?";
+
+    private static final String UPDATE_PERIODICAL_AND_SET_DISCARDED = "UPDATE periodicals AS p " +
+            "SET name=?, category=?, publisher=?, description=?, one_month_cost=?, status=? " +
+            "WHERE id=? AND 0 = (SELECT count(*) FROM subscriptions AS s " +
+            "WHERE s.periodical_id = p.id AND s.status = ?)";
+
+    private static final String DELETE_PERIODICAL = "DELETE FROM periodicals " +
+            "WHERE status = ?";
+
+    private static final String INSERT_INTO_ARCHIVE = "INSERT INTO periodical_archive " +
+            "(name, category, publisher, description, one_month_cost, delete_date) " +
+            "VALUES (?, ?, ?, ?, ?, ?)";
+
     @Override
     public Periodical findOneByName(String name) {
-        String query = "SELECT * FROM periodicals WHERE name = ?";
-
         try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
-             PreparedStatement ps = connection.prepareStatement(query)) {
+             PreparedStatement ps = connection.prepareStatement(SELECT_PERIODICAL_BY_NAME)) {
+
             ps.setString(1, name);
 
             try (ResultSet rs = ps.executeQuery()) {
@@ -42,10 +72,9 @@ public class PeriodicalDaoImpl implements PeriodicalDao {
 
     @Override
     public Periodical findOneById(Long id) {
-        String query = "SELECT * FROM periodicals WHERE id = ?";
-
         try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
-             PreparedStatement ps = connection.prepareStatement(query)) {
+             PreparedStatement ps = connection.prepareStatement(SELECT_PERIODICAL_BY_ID)) {
+
             ps.setLong(1, id);
 
             try (ResultSet rs = ps.executeQuery()) {
@@ -62,10 +91,9 @@ public class PeriodicalDaoImpl implements PeriodicalDao {
 
     @Override
     public List<Periodical> findAll() {
-        String query = "SELECT * FROM periodicals";
-
         try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
-             PreparedStatement st = connection.prepareStatement(query)) {
+             PreparedStatement st = connection.prepareStatement(SELECT_ALL_PERIODICAL)) {
+
             ResultSet rs = st.executeQuery();
 
             List<Periodical> periodicals = new ArrayList<>();
@@ -87,10 +115,9 @@ public class PeriodicalDaoImpl implements PeriodicalDao {
 
     @Override
     public List<Periodical> findAllByStatus(Periodical.Status status) {
-        String query = "SELECT * FROM periodicals WHERE status = ?";
-
         try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
-             PreparedStatement st = connection.prepareStatement(query)) {
+             PreparedStatement st = connection.prepareStatement(SELECT_PERIODICAL_BY_STATUS)) {
+
             st.setString(1, status.name().toLowerCase());
 
             ResultSet rs = st.executeQuery();
@@ -103,7 +130,6 @@ public class PeriodicalDaoImpl implements PeriodicalDao {
             }
 
             return periodicals;
-
         } catch (SQLException e) {
             String message = String.format("Exception during retrieving periodicals with status '%s'.", status);
             logger.error(message, e);
@@ -113,11 +139,9 @@ public class PeriodicalDaoImpl implements PeriodicalDao {
 
     @Override
     public int findNumberOfPeriodicalsWithCategoryAndStatus(PeriodicalCategory category, Periodical.Status status) {
-        String query = "SELECT COUNT(id) FROM periodicals " +
-                "WHERE category = ? AND status = ?";
-
         try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
-             PreparedStatement st = connection.prepareStatement(query)) {
+             PreparedStatement st = connection.prepareStatement(FIND_COUNT_OF_PERIODICAL)) {
+
             st.setString(1, category.name().toLowerCase());
             st.setString(2, status.name().toLowerCase());
 
@@ -137,12 +161,8 @@ public class PeriodicalDaoImpl implements PeriodicalDao {
 
     @Override
     public long add(Periodical periodical) {
-        String query = "INSERT INTO periodicals " +
-                "(name, category, publisher, description, one_month_cost, status) " +
-                "VALUES (?, ?, ?, ?, ?, ?)";
-
         try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
-             PreparedStatement st = connection.prepareStatement(query)) {
+             PreparedStatement st = connection.prepareStatement(INSERT_PERIODICAL)) {
 
             st.setString(1, periodical.getName());
             st.setString(2, periodical.getCategory().name().toLowerCase());
@@ -162,12 +182,9 @@ public class PeriodicalDaoImpl implements PeriodicalDao {
 
     @Override
     public int updateById(Long id, Periodical periodical) {
-        String query = "UPDATE periodicals " +
-                "SET name=?, category=?, publisher=?, description=?, one_month_cost=?, status=? " +
-                "WHERE id=?";
-
         try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
-             PreparedStatement st = connection.prepareStatement(query)) {
+             PreparedStatement st = connection.prepareStatement(UPDATE_PERIODICAL_BY_ID)) {
+
             st.setString(1, periodical.getName());
             st.setString(2, periodical.getCategory().name().toLowerCase());
             st.setString(3, periodical.getPublisher());
@@ -187,13 +204,8 @@ public class PeriodicalDaoImpl implements PeriodicalDao {
 
     @Override
     public int updateAndSetDiscarded(Periodical periodical) {
-        String query = "UPDATE periodicals AS p " +
-                "SET name=?, category=?, publisher=?, description=?, one_month_cost=?, status=? " +
-                "WHERE id=? AND 0 = (SELECT count(*) FROM subscriptions AS s " +
-                "WHERE s.periodical_id = p.id AND s.status = ?)";
-
         try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
-             PreparedStatement st = connection.prepareStatement(query)) {
+             PreparedStatement st = connection.prepareStatement(UPDATE_PERIODICAL_AND_SET_DISCARDED)) {
 
             st.setString(1, periodical.getName());
             st.setString(2, periodical.getCategory().name().toLowerCase());
@@ -215,11 +227,9 @@ public class PeriodicalDaoImpl implements PeriodicalDao {
 
     @Override
     public int deleteAllDiscarded() {
-        String query = "DELETE FROM periodicals " +
-                "WHERE status = ?";
-
         try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
-             PreparedStatement st = connection.prepareStatement(query)) {
+             PreparedStatement st = connection.prepareStatement(DELETE_PERIODICAL)) {
+
             st.setString(1, Periodical.Status.DISCARDED.name());
 
             return st.executeUpdate();
@@ -233,13 +243,8 @@ public class PeriodicalDaoImpl implements PeriodicalDao {
 
     @Override
     public int addIntoArchive(Periodical periodical) {
-        String query = "INSERT INTO periodical_archive " +
-                "(name, category, publisher, description, one_month_cost, delete_date) " +
-                "VALUES (?, ?, ?, ?, ?, ?)";
-
-
         try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
-             PreparedStatement st = connection.prepareStatement(query)) {
+             PreparedStatement st = connection.prepareStatement(INSERT_INTO_ARCHIVE)) {
 
             logger.debug("adding into archive");
             st.setString(1, periodical.getName());

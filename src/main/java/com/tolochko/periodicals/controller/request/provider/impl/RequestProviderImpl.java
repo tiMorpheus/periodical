@@ -29,7 +29,7 @@ import java.util.Optional;
 public final class RequestProviderImpl implements RequestProvider, Serializable {
     private static final long serialVersionUID = 121213111888L;
     private static final Logger logger = Logger.getLogger(RequestProviderImpl.class);
-    private Map<String, RequestProcessor> requestMapping = new HashMap<>();
+    private transient Map<String, RequestProcessor> requestMapping = new HashMap<>();
     private static final RequestProviderImpl instance = new RequestProviderImpl();
 
     private RequestProviderImpl() {

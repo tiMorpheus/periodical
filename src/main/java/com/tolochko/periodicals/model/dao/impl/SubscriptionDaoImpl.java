@@ -19,14 +19,31 @@ import java.util.List;
 public class SubscriptionDaoImpl implements SubscriptionDao {
     private static final Logger logger = Logger.getLogger(UserDaoImpl.class);
 
+    private static final String SELECT_SUBSCRIPTION_BY_USERID = "SELECT * FROM subscriptions " +
+            "WHERE user_id = ? AND periodical_id = ?";
+
+    private static final String SELECT_ALL_SUBSCRIPTION_BY_STATUS = "SELECT * FROM subscriptions " +
+            "JOIN periodicals ON (subscriptions.periodical_id = periodicals.id) " +
+            "WHERE periodicals.id = ? AND subscriptions.status = ?";
+
+    private static final String SELECT_SUBSCRIPTION_BY_USER = "SELECT * FROM users " +
+            "JOIN subscriptions ON (users.id = subscriptions.user_id) " +
+            "JOIN periodicals ON (subscriptions.periodical_id = periodicals.id) " +
+            "WHERE users.id = ?";
+
+    private static final String INSERT_SUBSCRIPTION = "INSERT INTO subscriptions " +
+            "(user_id, periodical_id, delivery_address, end_date, status) " +
+            "VALUES (?, ?, ?, ?, ?)";
+
+    private static final String UPDATE_SUBSCRIPTION = "UPDATE subscriptions " +
+            "SET user_id=?, periodical_id=?, delivery_address=?, end_date=?, status=? " +
+            "WHERE id=?";
+
 
     @Override
     public Subscription findOneByUserIdAndPeriodicalId(long userId, long periodicalId) {
-        String query = "SELECT * FROM subscriptions " +
-                "WHERE user_id = ? AND periodical_id = ?";
-
         try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
-             PreparedStatement st = connection.prepareStatement(query)) {
+             PreparedStatement st = connection.prepareStatement(SELECT_SUBSCRIPTION_BY_USERID)) {
             st.setLong(1, userId);
             st.setLong(2, periodicalId);
 
@@ -44,12 +61,9 @@ public class SubscriptionDaoImpl implements SubscriptionDao {
 
     @Override
     public List<Subscription> findAllByPeriodicalIdAndStatus(long periodicalId, Subscription.Status status) {
-        String query = "SELECT * FROM subscriptions " +
-                "JOIN periodicals ON (subscriptions.periodical_id = periodicals.id) " +
-                "WHERE periodicals.id = ? AND subscriptions.status = ?";
-
         try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
-             PreparedStatement st = connection.prepareStatement(query)) {
+             PreparedStatement st = connection.prepareStatement(SELECT_ALL_SUBSCRIPTION_BY_STATUS)) {
+
             st.setLong(1, periodicalId);
             st.setString(2, status.name().toLowerCase());
 
@@ -62,7 +76,6 @@ public class SubscriptionDaoImpl implements SubscriptionDao {
 
                 return subscriptions;
             }
-
         } catch (SQLException e) {
             String message = String.format("Exception during finding all periodicals for status = %s, periodicalId = %d",
                     status, periodicalId);
@@ -73,13 +86,9 @@ public class SubscriptionDaoImpl implements SubscriptionDao {
 
     @Override
     public List<Subscription> findAllByUser(User user) {
-        String query = "SELECT * FROM users " +
-                "JOIN subscriptions ON (users.id = subscriptions.user_id) " +
-                "JOIN periodicals ON (subscriptions.periodical_id = periodicals.id) " +
-                "WHERE users.id = ?";
-
         try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
-             PreparedStatement st = connection.prepareStatement(query)) {
+             PreparedStatement st = connection.prepareStatement(SELECT_SUBSCRIPTION_BY_USER)) {
+
             st.setLong(1, user.getId());
 
             ResultSet rs = st.executeQuery();
@@ -111,12 +120,8 @@ public class SubscriptionDaoImpl implements SubscriptionDao {
 
     @Override
     public long add(Subscription subscription) {
-        String query = "INSERT INTO subscriptions " +
-                "(user_id, periodical_id, delivery_address, end_date, status) " +
-                "VALUES (?, ?, ?, ?, ?)";
-
         try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
-             PreparedStatement st = connection.prepareStatement(query)) {
+             PreparedStatement st = connection.prepareStatement(INSERT_SUBSCRIPTION)) {
 
             st.setLong(1, subscription.getUser().getId());
             st.setLong(2, subscription.getPeriodical().getId());
@@ -135,12 +140,8 @@ public class SubscriptionDaoImpl implements SubscriptionDao {
 
     @Override
     public int updateById(Long id, Subscription subscription) {
-        String query = "UPDATE subscriptions " +
-                "SET user_id=?, periodical_id=?, delivery_address=?, end_date=?, status=? " +
-                "WHERE id=?";
-
         try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
-             PreparedStatement st = connection.prepareStatement(query)) {
+             PreparedStatement st = connection.prepareStatement(UPDATE_SUBSCRIPTION)) {
 
             st.setLong(1, subscription.getUser().getId());
             st.setLong(2, subscription.getPeriodical().getId());

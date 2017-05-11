@@ -18,13 +18,28 @@ import java.util.List;
 public class UserDaoImpl implements UserDao {
     private static final Logger logger = Logger.getLogger(UserDaoImpl.class);
 
+    private static final String SELECT_USER_BY_USERNAME = "SELECT * FROM users WHERE username = ?";
+
+    private static final String SELECT_USER_BY_ID = "SELECT * FROM users WHERE id = ?";
+
+    private static final String UPDATE_USER = "UPDATE users " +
+            "SET " +
+            "username = ?,first_name = ?, last_name = ?,email = ?, address = ?, password = ?, status = ? " +
+            "WHERE id = ?";
+
+    private static final String SELECT_ALL = "SELECT * FROM users";
+
+    private static final String INSERT_USER = "INSERT INTO users " +
+            "(username, first_name, last_name, email, address, password, status) " +
+            "VALUES (?, ?, ?, ?, ?, ?, ?)";
+
+    private static final String IS_USER_EXISTS = "SELECT COUNT(id) FROM users " +
+            "WHERE users.email = ?";
 
     @Override
     public User findOneByUserName(String userName) {
-        String query = "SELECT * FROM users WHERE username = ?";
-
         try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
-             PreparedStatement ps = connection.prepareStatement(query)) {
+             PreparedStatement ps = connection.prepareStatement(SELECT_USER_BY_USERNAME)) {
 
             ps.setString(1, userName);
 
@@ -41,11 +56,8 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public boolean emailExistsInDb(String email) {
-        String query = "SELECT COUNT(id) FROM users " +
-                "WHERE users.email = ?";
-
         try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
-             PreparedStatement st = connection.prepareStatement(query)) {
+             PreparedStatement st = connection.prepareStatement(IS_USER_EXISTS)) {
             st.setString(1, email);
 
             try (ResultSet rs = st.executeQuery()) {
@@ -61,10 +73,8 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public User findOneById(Long id) {
-        String query = "SELECT * FROM users WHERE id = ?";
-
         try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
-             PreparedStatement ps = connection.prepareStatement(query)) {
+             PreparedStatement ps = connection.prepareStatement(SELECT_USER_BY_ID)) {
             ps.setLong(1, id);
 
             try (ResultSet rs = ps.executeQuery()) {
@@ -75,7 +85,6 @@ public class UserDaoImpl implements UserDao {
             }
 
         } catch (SQLException e) {
-
             String message = String.format("Exception during finding a user with id = %s", id);
             logger.error(message, e);
             throw new DaoException(message, e);
@@ -85,13 +94,12 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public List<User> findAll() {
-        String query = "SELECT * FROM users";
-
         try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
-             PreparedStatement st = connection.prepareStatement(query);
+             PreparedStatement st = connection.prepareStatement(SELECT_ALL);
              ResultSet rs = st.executeQuery()) {
 
             List<User> users = new ArrayList<>();
+
             while (rs.next()) {
                 users.add(DaoUtil.createUserFromResultSet(rs));
             }
@@ -109,14 +117,9 @@ public class UserDaoImpl implements UserDao {
         String errorMessage = String.format("Exception during creating a new user: %s", user);
         String errorMessageNoRows = String.format("Creating user (%s) failed, no rows affected.", user);
 
-        String sqlStatement = "INSERT INTO users " +
-                "(username, first_name, last_name, email, address, password, status) " +
-                "VALUES (?, ?, ?, ?, ?, ?, ?)";
-
-
         try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
              PreparedStatement st = connection
-                     .prepareStatement(sqlStatement, Statement.RETURN_GENERATED_KEYS)) {
+                     .prepareStatement(INSERT_USER, Statement.RETURN_GENERATED_KEYS)) {
 
             st.setString(1, user.getUsername());
             st.setString(2, user.getFirstName());
@@ -133,7 +136,6 @@ public class UserDaoImpl implements UserDao {
         } catch (SQLException e) {
             logger.error(errorMessage, e);
         }
-
         return 0;
     }
 
@@ -158,14 +160,9 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public int updateById(Long id, User user) {
-        String query = "UPDATE users " +
-                "SET " +
-                "username = ?,first_name = ?, last_name = ?,email = ?, address = ?, password = ?, status = ? " +
-                "WHERE id = ?";
-
         try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
              PreparedStatement st =
-                     connection.prepareStatement(query)) {
+                     connection.prepareStatement(UPDATE_USER)) {
 
             st.setString(1, user.getUsername());
             st.setString(2, user.getFirstName());

@@ -8,7 +8,9 @@ import org.apache.log4j.Logger;
 
 public class TransactionHelper {
     private static final Logger logger = Logger.getLogger(TransactionHelper.class);
-    private final static ThreadLocal<ConnectionProxy> connections = new ThreadLocal<>();
+    private static final ThreadLocal<ConnectionProxy> connections = new ThreadLocal<>();
+
+    private TransactionHelper(){}
 
     public static ConnectionProxy getConnectionProxy() {
         ConnectionProxy connection = connections.get();

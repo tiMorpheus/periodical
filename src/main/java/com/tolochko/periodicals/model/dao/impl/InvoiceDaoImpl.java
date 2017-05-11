@@ -21,34 +21,50 @@ import static java.util.Objects.nonNull;
 public class InvoiceDaoImpl implements InvoiceDao {
     private static final Logger logger = Logger.getLogger(InvoiceDaoImpl.class);
 
+    private static final String SELECT_ALL_BY_USER_ID = "SELECT * FROM invoices " +
+            "JOIN users ON (invoices.user_id = users.id) " +
+            "WHERE users.id = ?";
+
+    private static final String SELECT_ALL_BY_PERIODICAL_ID = "SELECT * FROM invoices " +
+            "JOIN periodicals ON (invoices.periodical_id = periodicals.id) " +
+            "WHERE periodicals.id = ?";
+
+    private static final String SELECT_SUM_BY_CREATION_DATE = "SELECT SUM(total_sum) FROM invoices " +
+            "WHERE creation_date >= ? AND creation_date <= ?";
+
+    private static final String SELECT_SUM_BY_PAYMENT_DATE = "SELECT SUM(total_sum) FROM invoices " +
+            "WHERE payment_date >= ? AND payment_date <= ? AND status = ?";
+
+    private static final String SELECT_INVOICE_BY_ID = "SELECT * FROM invoices WHERE id = ?";
+
+    private static final String INSERT_INVOICE = "INSERT INTO invoices " +
+            "(user_id, periodical_id, period, total_sum, creation_date, payment_date, status) " +
+            "VALUES (?, ?, ?, ?, ?, ?, ?)";
+
+    private static final String UPDATE_BY_ID = "UPDATE invoices " +
+            "SET user_id=?, periodical_id=?, period=?, total_sum=?, creation_date=?, " +
+            "payment_date=?, status=? WHERE id=?";
+
     @Override
     public List<Invoice> findAllByUserId(long userId) {
-        String query = "SELECT * FROM invoices " +
-                "JOIN users ON (invoices.user_id = users.id) " +
-                "WHERE users.id = ?";
-
         try {
-            return executeAndGetInvoicesFromRs(query, userId);
+            return executeAndGetInvoicesFromRs(SELECT_ALL_BY_USER_ID, userId);
 
         } catch (SQLException e) {
             String message = String.format("Exception during execution statement '%s' for userId = %d.",
-                    query, userId);
+                    SELECT_ALL_BY_USER_ID, userId);
             throw new DaoException(message, e);
         }
     }
 
     @Override
     public List<Invoice> findAllByPeriodicalId(long periodicalId) {
-        String query = "SELECT * FROM invoices " +
-                "JOIN periodicals ON (invoices.periodical_id = periodicals.id) " +
-                "WHERE periodicals.id = ?";
-
         try {
-            return executeAndGetInvoicesFromRs(query, periodicalId);
+            return executeAndGetInvoicesFromRs(SELECT_ALL_BY_PERIODICAL_ID, periodicalId);
 
         } catch (SQLException e) {
             String message = String.format("Exception during execution statement '%s' for periodicalId = %d.",
-                    query, periodicalId);
+                    SELECT_ALL_BY_PERIODICAL_ID, periodicalId);
             throw new DaoException(message, e);
         }
     }
@@ -74,11 +90,9 @@ public class InvoiceDaoImpl implements InvoiceDao {
 
     @Override
     public long getCreatedInvoiceSumByCreationDate(Instant since, Instant until) {
-        String query = "SELECT SUM(total_sum) FROM invoices " +
-                "WHERE creation_date >= ? AND creation_date <= ?";
-
         try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
-             PreparedStatement st = connection.prepareStatement(query)) {
+             PreparedStatement st = connection.prepareStatement(SELECT_SUM_BY_CREATION_DATE)) {
+
             st.setTimestamp(1, new Timestamp(since.toEpochMilli()));
             st.setTimestamp(2, new Timestamp(until.toEpochMilli()));
 
@@ -97,11 +111,8 @@ public class InvoiceDaoImpl implements InvoiceDao {
 
     @Override
     public long getPaidInvoiceSumByPaymentDate(Instant since, Instant until) {
-        String query = "SELECT SUM(total_sum) FROM invoices " +
-                "WHERE payment_date >= ? AND payment_date <= ? AND status = ?";
-
         try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
-             PreparedStatement st = connection.prepareStatement(query)) {
+             PreparedStatement st = connection.prepareStatement(SELECT_SUM_BY_PAYMENT_DATE)) {
 
             st.setTimestamp(1, new Timestamp(since.toEpochMilli()));
             st.setTimestamp(2, new Timestamp(until.toEpochMilli()));
@@ -121,10 +132,9 @@ public class InvoiceDaoImpl implements InvoiceDao {
 
     @Override
     public Invoice findOneById(Long id) {
-        String query = "SELECT * FROM invoices WHERE id = ?";
-
         try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
-             PreparedStatement st = connection.prepareStatement(query)) {
+             PreparedStatement st = connection.prepareStatement(SELECT_INVOICE_BY_ID)) {
+
             st.setLong(1, id);
 
             try (ResultSet rs = st.executeQuery()) {
@@ -133,7 +143,7 @@ public class InvoiceDaoImpl implements InvoiceDao {
 
         } catch (SQLException e) {
             String message = String.format("Exception during execution statement '%s' for invoiceId = %d.",
-                    query, id);
+                    SELECT_INVOICE_BY_ID, id);
             logger.error(message, e);
             throw new DaoException(message, e);
         }
@@ -142,12 +152,8 @@ public class InvoiceDaoImpl implements InvoiceDao {
 
     @Override
     public long add(Invoice invoice) {
-        String query = "INSERT INTO invoices " +
-                "(user_id, periodical_id, period, total_sum, creation_date, payment_date, status) " +
-                "VALUES (?, ?, ?, ?, ?, ?, ?)";
-
         try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
-             PreparedStatement st = connection.prepareStatement(query)) {
+             PreparedStatement st = connection.prepareStatement(INSERT_INVOICE)) {
 
             st.setLong(1, invoice.getUser().getId());
             st.setLong(2, invoice.getPeriodical().getId());
@@ -161,19 +167,15 @@ public class InvoiceDaoImpl implements InvoiceDao {
 
         } catch (SQLException e) {
             String message = String.format("Exception during execution statement '%s' for invoice = %s.",
-                    query, invoice);
+                    INSERT_INVOICE, invoice);
             throw new DaoException(message, e);
         }
     }
 
     @Override
     public int updateById(Long id, Invoice invoice) {
-        String query = "UPDATE invoices " +
-                "SET user_id=?, periodical_id=?, period=?, total_sum=?, creation_date=?, " +
-                "payment_date=?, status=? WHERE id=?";
-
         try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
-             PreparedStatement st = connection.prepareStatement(query)) {
+             PreparedStatement st = connection.prepareStatement(UPDATE_BY_ID)) {
 
             st.setLong(1, invoice.getUser().getId());
             st.setLong(2, invoice.getPeriodical().getId());
@@ -188,7 +190,7 @@ public class InvoiceDaoImpl implements InvoiceDao {
 
         } catch (SQLException e) {
             String message = String.format("Exception during execution statement '%s' for invoice = %s.",
-                    query, invoice);
+                    UPDATE_BY_ID, invoice);
             throw new DaoException(message, e);
         }
     }
