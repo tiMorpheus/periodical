@@ -18,6 +18,7 @@ public class UserEmailValidator extends AbstractValidator {
             new ValidationResult(412, "validation.userEmailIsIncorrect");
     private static ValidationResult duplicationFailedResult =
             new ValidationResult(412, "validation.userEmailIsNotUnique");
+
     public static final String USER_EMAIL_PATTERN_REGEX =
             "^([a-z0-9_-]+\\.)*[a-z0-9_-]+@[a-z0-9_-]+(\\.[a-z0-9_-]+)*\\.[a-z]{2,6}$";
 

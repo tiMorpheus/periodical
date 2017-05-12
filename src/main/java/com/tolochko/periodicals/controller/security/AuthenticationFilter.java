@@ -17,7 +17,7 @@ import static java.util.Objects.isNull;
  */
 public class AuthenticationFilter implements Filter {
 
-    private List<String> unProtectedUris = Arrays.asList("/app/signIn", "/app/signUp",
+    private final List<String> unProtectedUris = Arrays.asList("/app/signIn", "/app/signUp",
             "/app/validation");
 
     @Override

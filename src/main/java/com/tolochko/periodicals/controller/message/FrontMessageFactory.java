@@ -41,6 +41,7 @@ public class FrontMessageFactory {
     private FrontMessage getMessageFromCache(Map<String, FrontMessage> cache,
                                              FrontMessage.MessageType messageType,
                                              String messageKey) {
+
         if (!cache.containsKey(messageKey)) {
             cache.put(messageKey, new FrontMessage(messageKey, messageType));
         }

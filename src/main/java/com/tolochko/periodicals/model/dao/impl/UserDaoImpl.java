@@ -98,6 +98,7 @@ public class UserDaoImpl implements UserDao {
              PreparedStatement st = connection.prepareStatement(SELECT_ALL);
              ResultSet rs = st.executeQuery()) {
 
+
             List<User> users = new ArrayList<>();
 
             while (rs.next()) {

@@ -28,6 +28,7 @@ public class ConnectionProxyImpl implements ConnectionProxy {
             transactionBegun = true;
             logger.debug("Transaction begun");
         } catch (SQLException e) {
+            logger.error(CAN_NOT_BEGIN_TRANSACTION, e);
             throw new TransactionException(CAN_NOT_BEGIN_TRANSACTION, e);
         }
     }
