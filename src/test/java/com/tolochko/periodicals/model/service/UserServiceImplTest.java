@@ -50,6 +50,8 @@ public class UserServiceImplTest {
         when(factory.getUserDao()).thenReturn(userDao);
         when(factory.getRoleDao()).thenReturn(roleDao);
 
+
+
     }
 
     @Test

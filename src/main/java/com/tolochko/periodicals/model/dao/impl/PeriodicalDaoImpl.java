@@ -263,4 +263,21 @@ public class PeriodicalDaoImpl implements PeriodicalDao {
         }
 
     }
+
+    @Override
+    public void delete(long id) {
+        String query = "DELETE FROM periodicals WHERE id = ?";
+
+        try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
+             PreparedStatement st = connection.prepareStatement(query)) {
+
+            st.setLong(1, id);
+
+             st.executeUpdate();
+        } catch (SQLException e) {
+            String message = "Exception during deleting discarded periodicals.";
+            logger.error(message, e);
+            throw new DaoException(message, e);
+        }
+    }
 }

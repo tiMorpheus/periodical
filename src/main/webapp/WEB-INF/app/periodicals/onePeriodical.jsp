@@ -25,7 +25,7 @@
             <label class="col-sm-3 control-label">
                 <fmt:message key="publisher.label" bundle="${langPeriodical}"/></label>
             <div class="col-sm-9">
-                <p class="form-control-static"><c:out value="${periodical.publisher}" /></p>
+                <p class="form-control-static"><c:out value="${periodical.publisher}"/></p>
             </div>
         </div>
         <div class="row">
@@ -75,11 +75,20 @@
             </custom:if-authorized>
 
             <custom:if-authorized mustHaveRole="admin">
-                <a href="<c:url
+
+                    <a href="<c:url
                 value="${'/app/periodicals/'.concat(periodical.id).concat('/update/')}"/>"
-                   class="btn btn-warning"
-                   role="button">
-                    <fmt:message key="editBtn.label" bundle="${langPeriodical}"/></a>
+                       class="btn btn-warning"
+                       role="button">
+                        <fmt:message key="editBtn.label" bundle="${langPeriodical}"/></a>
+                <div class="col-sm-6 col-xs-6 text-right">
+                    <form method="post" action="/app/periodicals/${periodical.id}/delete">
+                        <button type="submit" class="btn btn-danger">
+                            <fmt:message key="deleteBtn.label" bundle="${langPeriodical}"/>
+                        </button>
+                    </form>
+                </div>
+
             </custom:if-authorized>
         </div>
 

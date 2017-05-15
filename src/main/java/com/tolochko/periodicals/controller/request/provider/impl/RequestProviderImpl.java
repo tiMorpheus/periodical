@@ -45,6 +45,8 @@ public final class RequestProviderImpl implements RequestProvider, Serializable 
         requestMapping.put("POST:/app/users/?", new UpdateUser());
         requestMapping.put("POST:/app/users/changeStatus/\\d+/?", new ChangeStatus());
 
+        requestMapping.put("POST:/app/periodicals/\\d+/delete/?", new DeletePeriodical());
+
         requestMapping.put("GET:/app/adminPanel/?", new DisplayAdminPanel());
 
         requestMapping.put("GET:/app/periodicals/?", new DisplayAllPeriodicals());
@@ -83,10 +85,8 @@ public final class RequestProviderImpl implements RequestProvider, Serializable 
 
         // if mapping was found
         if (currentMapping.isPresent()) {
-            logger.info("found processor ");
             return currentMapping.get().getValue();
         }
-
 
         // if wrong request
         logger.error("There no mapping for such a request: " + request.getRequestURI());

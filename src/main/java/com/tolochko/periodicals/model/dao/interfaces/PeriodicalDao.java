@@ -30,4 +30,7 @@ public interface PeriodicalDao extends GenericDao<Periodical, Long> {
     int deleteAllDiscarded();
 
     int addIntoArchive(Periodical periodical);
+
+    void delete(long id);
+
 }

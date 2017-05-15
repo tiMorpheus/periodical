@@ -8,6 +8,7 @@ import java.util.List;
 
 public interface PeriodicalService {
 
+    void deleteOnePeriodical(long id);
 
     List<Periodical> findAllByStatus(Periodical.Status status);
 

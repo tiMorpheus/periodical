@@ -31,7 +31,6 @@ public class ConnectionPoolImpl implements ConnectionPool {
     public ConnectionProxy getConnection() {
         Connection connection;
         try {
-
             connection = dataSource.getConnection();
         } catch (SQLException e) {
             logger.error("Cannot create connection from data source", e);

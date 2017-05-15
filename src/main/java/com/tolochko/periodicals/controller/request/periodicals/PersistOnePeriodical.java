@@ -71,9 +71,8 @@ public class PersistOnePeriodical implements RequestProcessor {
             }
 
             addGeneralMessagesToSession(request, generalMessages);
-            logger.debug("homming");
-            return "/app";
 
+            return "/app";
         } catch (RuntimeException e) {
             logger.error("Exception during persisting periodical: " + periodicalToSave, e);
             addErrorMessage("periodicalPersisting.error", generalMessages, request);

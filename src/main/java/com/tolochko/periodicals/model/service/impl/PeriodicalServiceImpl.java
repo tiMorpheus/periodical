@@ -37,6 +37,13 @@ public class PeriodicalServiceImpl implements PeriodicalService {
     }
 
     @Override
+    public void deleteOnePeriodical(long id) {
+        Periodical periodical = factory.getPeriodicalDao().findOneById(id);
+        factory.getPeriodicalDao().addIntoArchive(periodical);
+        factory.getPeriodicalDao().delete(id);
+    }
+
+    @Override
     public List<Periodical> findAllByStatus(Periodical.Status status) {
         return factory.getPeriodicalDao().findAllByStatus(status);
     }

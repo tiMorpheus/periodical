@@ -75,6 +75,7 @@ public class UserDaoImpl implements UserDao {
     public User findOneById(Long id) {
         try (ConnectionProxy connection = TransactionHelper.getConnectionProxy();
              PreparedStatement ps = connection.prepareStatement(SELECT_USER_BY_ID)) {
+
             ps.setLong(1, id);
 
             try (ResultSet rs = ps.executeQuery()) {

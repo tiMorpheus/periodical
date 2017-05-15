@@ -65,6 +65,7 @@ public class ConnectionProxyImpl implements ConnectionProxy {
                 connection.close();
             }
         } catch (SQLException e) {
+            logger.error(CAN_NOT_CLOSE_CONNECTION, e);
             throw new TransactionException(CAN_NOT_CLOSE_CONNECTION, e);
         }
     }
