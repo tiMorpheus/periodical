@@ -25,10 +25,6 @@
    <filter-mapping>
       <filter-name>EncodingFilter</filter-name>
       <url-pattern>/app/*</url-pattern>
-      <dispatcher>REQUEST</dispatcher>
-      <dispatcher>FORWARD</dispatcher>
-      <dispatcher>INCLUDE</dispatcher>
-      <dispatcher>ERROR</dispatcher>
    </filter-mapping>
 
     <filter>

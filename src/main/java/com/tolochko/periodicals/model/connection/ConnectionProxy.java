@@ -5,6 +5,7 @@ import java.sql.SQLException;
 
 public interface ConnectionProxy extends AutoCloseable {
 
+
     /**
      * Defines begin of transaction.
      */
